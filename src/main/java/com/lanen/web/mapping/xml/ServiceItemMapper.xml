@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lanen.web.dao.ServiceItemMapperDao">
+	<resultMap type="com.lanen.web.pojo.ServiceItem" id="serviceMap">
+		<id column="id" property="id" />
+		<result column="service_name" property="serviceName" />
+		<result column="service_content" property="serviceContent" />
+		<result column="service_pic" property="servicePic" />
+		<result column="create_user" property="createUser" />
+		<result column="create_time" property="createTime" />
+		<result column="is_del" property="isDel" />
+		<result column="parent_id" property="parentId" />
+	</resultMap>
+
+	<select id="queryServiceItem" resultMap="serviceMap">
+		select * from
+		weixin_service_item where is_del!=1 and parent_id=0
+	</select>
+	<select id="queryServiceItemByParentId" resultMap="serviceMap">
+		select * from
+		weixin_service_item where is_del!=1 and parent_id=#{parentId}
+	</select>
+
+</mapper>
