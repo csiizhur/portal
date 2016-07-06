@@ -12,16 +12,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="Cache-Control" content="no-siteapp"/>
   
-  <link rel="alternate icon" type="img/HENGWANG.png" href="${pageContext.request.contextPath}/res/img/HENGWANG.png">
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/amazeui.css"/>
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/style.css"/>
+  <link rel="alternate icon" type="img/HENGWANG.png" href="/res/img/xishanlogo.png">
+  <link rel="stylesheet" href="/res/css/amazeui.css"/>
+  <link rel="stylesheet" href="/res/css/style.css"/>
 </head>
 <body>
 <header class="am-topbar header">
 	<div class="am-container-1">
 		<div class="left hw-logo">
-		  <img class=" logo" src="${pageContext.request.contextPath}/res/img/HENGWANG.png"></img>
-		  <img class="word" src="${pageContext.request.contextPath}/res/img/hw-word.png"></img>
+		  <img class=" logo" src="/res/img/xishanlogo.png"></img>
+		  <img class="word" src="/res/img/xishanlogo.png"></img>
     </div>
   <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
           data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span
@@ -32,13 +32,12 @@
 
     <div class=" am-topbar-left am-form-inline am-topbar-right" role="search">
       <ul class="am-nav am-nav-pills am-topbar-nav hw-menu">
-      <li><a href="index.html">首页</a></li>
-      <li><a href="../gnsys/index.htm">功能实验室</a></li>
+      <li><a href="/index.htm">首页</a></li>
+      <li><a href="/gnsys/index.htm">功能实验室</a></li>
       <li><a href="fw/index.htm">服务中心 </a></li>
-      <li class="hw-menu-active"><a href="../xwhd/index.htm">新闻动态 </a></li>
-      <li><a href="../gyxs/index.htm">关于西山</a></li>
-      <li><a href="../lxwm/index.htm">联系我们</a></li>
-      <li><a href="recruit.html">招贤纳士 </a></li>
+      <li class="hw-menu-active"><a href="/xwhd/index.htm">新闻动态 </a></li>
+      <li><a href="/gyxs/index.htm">关于西山</a></li>
+      <li><a href="/lxwm/index.htm">联系我们</a></li>
     </ul>
     </div>
 

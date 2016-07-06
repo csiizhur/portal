@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -11,8 +13,8 @@
   <meta http-equiv="Cache-Control" content="no-siteapp"/>
   
   <link rel="alternate icon" type="res/img/xishanlogo.png" href="res/img/xishanlogo.png">
-  <link rel="stylesheet" href="res/css/amazeui.css"/>
-  <link rel="stylesheet" href="res/css/style.css"/>
+  <link rel="stylesheet" href="/res/css/amazeui.css"/>
+  <link rel="stylesheet" href="/res/css/style.css"/>
 </head>
 
 
@@ -37,7 +39,7 @@
 
     <div class=" am-topbar-left am-form-inline am-topbar-right" role="search">
       <ul class="am-nav am-nav-pills am-topbar-nav hw-menu">
-      <li class="hw-menu-active"><a href="index.html">首页</a></li>
+      <li class="hw-menu-active"><a href="/index.htm">首页</a></li>
       <li><a href="/gnsys/index.htm">功能实验室 </a></li>
       <li><a href="/fw/index.htm">服务中心 </a></li>
       <li><a href="/xwhd/index.htm">西山新闻动态 </a></li>
@@ -61,7 +63,7 @@
 <div class="am-container-1">
 	<div class="solutions part-all">
 		<div class="part-title">
-			<a href="solutions.html">
+			<a href="#">
 			<i class="am-icon-lightbulb-o part-title-i"></i>
 			<span class="part-title-span">解决方案</span>
 			<p>Solutions</p>
@@ -109,7 +111,7 @@
       <li class="case-li am-u-sm-6 am-u-md-6 am-u-lg-3">
         <div class="am-gallery-item case-img1">
             <a href="#" >
-              <img src="img/app1.png"  />
+              <img src="res/img/app1.png"  />
                 
             </a>
         </div>
@@ -266,7 +268,7 @@
 										<span class="news-right-title">关于召开年会的通知</span>
 										<p class="news-right-time">2015-06-11</p>
 										<p class="news-right-words">互联网，又称网际网路或音译因特网、英特网，是网络与网络之间所串连成的庞大网络网络与网络之...</p>
-										<a><span class="see-more2">查看更多<i class="am-icon-angle-double-right"></i></span></a>
+										<a href="/xwhd/index.htm"><span class="see-more2">查看更多<i class="am-icon-angle-double-right"></i></span></a>
 								 </div>	
 						<div class="clear"></div>
 						</a>
@@ -282,7 +284,7 @@
 										<span class="news-right-title">关于召开年会的通知</span>
 										<p class="news-right-time">2015-06-11</p>
 										<p class="news-right-words">互联网，又称网际网路或音译因特网、英特网，是网络与网络之间所串连成的庞大网络网络与网络之...</p>
-										<a><span class="see-more2">查看更多<i class="am-icon-angle-double-right"></i></span></a>
+										<a href="/xwhd/index.htm"><span class="see-more2">查看更多<i class="am-icon-angle-double-right"></i></span></a>
 								 </div>	
 						<div class="clear"></div>
 						</a>

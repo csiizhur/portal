@@ -64,7 +64,7 @@
   </session-config>
   
   <welcome-file-list>
-    <welcome-file>/WEB-INF/views/index.html</welcome-file>
+    <welcome-file>/WEB-INF/views/index.jsp</welcome-file>
   </welcome-file-list>
   
   <!-- 自定义一个servlet -->

@@ -33,13 +33,12 @@
 
     <div class=" am-topbar-left am-form-inline am-topbar-right" role="search">
       <ul class="am-nav am-nav-pills am-topbar-nav hw-menu">
-      <li><a href="${pageContext.request.contextPath}/index.html">首页</a></li>
+      <li><a href="${pageContext.request.contextPath}/index.htm">首页</a></li>
       <li><a href="${pageContext.request.contextPath}/gnsys/index.htm">功能实验室</a></li>      
       <li><a href="${pageContext.request.contextPath}/fw/index.htm">服务中心 </a></li>
       <li><a href="${pageContext.request.contextPath}/xwhd/index.htm">新闻动态 </a></li>
       <li><a href="${pageContext.request.contextPath}/gyxs/index.htm">关于我们</a></li>
       <li class="hw-menu-active"><a href="${pageContext.request.contextPath}/lxwm/index.htm">联系我们</a></li>
-      <li><a href="${pageContext.request.contextPath}/recruit.html">招贤纳士 </a></li>
     </ul>
     </div>
 

@@ -14,7 +14,6 @@ import com.lanen.web.util.PageUtil;
 
 public class BaseController {
 
-	
 	public ModelAndView backView(String view, PageInfo T) {
 		ModelAndView v = new ModelAndView(view);
 		Map<String,Object> map=new HashMap<String,Object>();

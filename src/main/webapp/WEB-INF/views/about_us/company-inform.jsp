@@ -12,16 +12,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="Cache-Control" content="no-siteapp"/>
   
-  <link rel="alternate icon" type="img/hengwang-1.png" href="${pageContext.request.contextPath}/res/img/hengwang-1.png">
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/amazeui.css"/>
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/style.css"/>
+  <link rel="alternate icon" type="img/hengwang-1.png" href="/res/img/xishanlogo.png">
+  <link rel="stylesheet" href="/res/css/amazeui.css"/>
+  <link rel="stylesheet" href="/res/css/style.css"/>
 </head>
 <body>
 <header class="am-topbar header">
 	<div class="am-container-1">
 		<div class="left hw-logo">
-		  <img class=" logo" src="${pageContext.request.contextPath}/res/img/HENGWANG.png"></img>
-		  <img class="word" src="${pageContext.request.contextPath}/res/img/hw-word.png"></img>
+		  <img class=" logo" src="/res/img/xishanlogo.png"></img>
+		  <img class="word" src="/res/img/xishanlogo.png"></img>
     </div>
   <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
           data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span
@@ -32,13 +32,12 @@
 
     <div class=" am-topbar-left am-form-inline am-topbar-right" role="search">
       <ul class="am-nav am-nav-pills am-topbar-nav hw-menu">
-      <li><a href="index.html">首页</a></li>
-      <li><a href="../gnsys/index.htm">功能实验室 </a></li>
-      <li class="../hw-menu-active"><a href="fw/index.htm">服务中心 </a></li>
-      <li><a href="../xwhd/index.htm">新闻动态 </a></li>
-      <li><a href="../gyxs/index.htm">关于我们</a></li>
-      <li><a href="../lxwm/index.htm">联系我们</a></li>
-      <li><a href="recruit.html">招贤纳士 </a></li>
+      <li><a href="/index.htm">首页</a></li>
+      <li><a href="/gnsys/index.htm">功能实验室 </a></li>
+      <li class="/hw-menu-active"><a href="/fw/index.htm">服务中心 </a></li>
+      <li><a href="/xwhd/index.htm">新闻动态 </a></li>
+      <li><a href="/gyxs/index.htm">关于我们</a></li>
+      <li><a href="/lxwm/index.htm">联系我们</a></li>
     </ul>
     </div>
 
@@ -53,9 +52,9 @@
 			<p>Company Center</p>
 		</div>
 		<div class="right toppic-progress">
-			<span><a href="index.html" class="w-white">首页</a></span>
+			<span><a href="/index.htm" class="w-white">首页</a></span>
 			<i class=" am-icon-arrow-circle-right w-white"></i>
-			<span><a href="service-center.html" class="w-white">公司介绍</a></span>
+			<span><a href="/gyxs/index.htm" class="w-white">关于西山</a></span>
 		</div>
 	</div>
 </div>
@@ -72,7 +71,7 @@
                                 努力让更多的用户可以下载到。</p>
 	    		</div>
 	    		<div class="am-u-lg-4 am-u-md-4 am-u-sm-12 service-img">
-	    		   <img src="${pageContext.request.contextPath}/res/img/android.png" />	
+	    		   <img src="/res/img/android.png" />	
 	    		</div>
 	    	</li>
 	    	<li class="am-u-lg-12 am-u-md-12 am-u-sm-12">
@@ -84,7 +83,7 @@
 	    				程序，目前上架运营的超过20款。我们紧随时代潮流，将最新的设计理念和技术应用到项目中。</p>
 	    		</div>
 	    		<div class="am-u-lg-4 am-u-md-4 am-u-sm-12 service-img">
-	    		   <img src="${pageContext.request.contextPath}/res/img/ios.png" />	
+	    		   <img src="/res/img/ios.png" />	
 	    		</div>
 	    	</li>
 	    	<li class="am-u-lg-12 am-u-md-12 am-u-sm-12">
@@ -96,7 +95,7 @@
 	    				可以结合微信公众平台，更好得去运营App平台和网站，不但提高了用户的数量，而且更好得拉近了与用户的距离。</p>
 	    		</div>
 	    		<div class="am-u-lg-4 am-u-md-4 am-u-sm-12 service-img">
-	    		   <img src="${pageContext.request.contextPath}/res/img/wechat.png" />
+	    		   <img src="/res/img/wechat.png" />
 	    		</div>
 	    	</li>
 	    	<li class="am-u-lg-12 am-u-md-12 am-u-sm-12">
@@ -107,7 +106,7 @@
 	    				口性能优良，支持十万百万级的用户并发量。</p>
 	    		</div>
 	    		<div class="am-u-lg-4 am-u-md-4 am-u-sm-12 service-img">
-	    		   <img src="${pageContext.request.contextPath}/res/img/webservice.png" />	
+	    		   <img src="/res/img/webservice.png" />	
 	    		</div>
 	    	</li>
 	    	<li class="am-u-lg-12 am-u-md-12 am-u-sm-12">
@@ -118,7 +117,7 @@
                                   开发了微信公众平台帐号。客户可以结合微信公众平台，更好得去运营App平台和网站，不但提高了用户的数量，而且更好得拉近了与用户的距离。</p>
 	    		</div>
 	    		<div class="am-u-lg-4 am-u-md-4 am-u-sm-12 service-img">
-	    		   <img src="${pageContext.request.contextPath}/res/img/website.png" />	
+	    		   <img src="/res/img/website.png" />	
 	    		</div>
 	    	</li>
 	    	<li class="am-u-lg-12 am-u-md-12 am-u-sm-12">
@@ -129,7 +128,7 @@
 	    				发前端技术，使客户的网站在多种平台多种分辨率下拥有统一的显示效果，另外可以实现更炫的动态效果。</p>
 	    		</div>
 	    		<div class="am-u-lg-4 am-u-md-4 am-u-sm-12 service-img">
-	    		   <img src="${pageContext.request.contextPath}/res/img/mwebsite.png" />
+	    		   <img src="/res/img/mwebsite.png" />
 	    		</div>
 	    	</li>
 	    </ul>
@@ -181,8 +180,8 @@
 <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
 <script src="assets/js/amazeui.ie8polyfill.min.js"></script>
 <![endif]-->
-<script src="${pageContext.request.contextPath}/res/js/jquery.min.js"></script>
-<script src="${pageContext.request.contextPath}/res/js/amazeui.min.js"></script>
+<script src="/res/js/jquery.min.js"></script>
+<script src="/res/js/amazeui.min.js"></script>
 <!--[if (gte IE 9)|!(IE)]><!-->
 
 </html>

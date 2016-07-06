@@ -33,13 +33,12 @@
 
     <div class=" am-topbar-left am-form-inline am-topbar-right" role="search">
       <ul class="am-nav am-nav-pills am-topbar-nav hw-menu">
-      <li><a href="index.html">首页</a></li>
+      <li><a href="/index.htm">首页</a></li>
       <li><a href="/gnsys/index.htm">功能实验室</a></li>
       <li class="hw-menu-active"><a href="/fw/index.htm">服务中心 </a></li>
       <li><a href="/xwhd/index.htm">新闻动态 </a></li>
       <li><a href="/gyxs/index.htm">关于我们</a></li>
       <li><a href="/lxwm/index.htm">联系我们</a></li>
-      <li><a href="/recruit.htm">招贤纳士 </a></li>
     </ul>
     </div>
 
@@ -64,46 +63,11 @@
 <div class=" am-container-1">
 	<div class="service-center">
 	    <ul class="service-ul">
-	    	<li class="am-u-lg-12 am-u-md-12 am-u-sm-12">
-	    		<div class="am-u-lg-8 am-u-md-8 am-u-sm-12 service-content">
-	    			<h4 class="w-blue">Android应用程序开发</h4>
-	    			<p>据统计，2013年，Android全球市场份额达到了78.6%，而中国市场也达到了78%。在移动操作市场，Android已经成为不可动摇的王者。
-                                针对目前Android平台日益严重的碎片化问题，我们提供了多种解决方案，针对不同的系统版本，设备型号和设备分辨率，我们提供了全面
-                                的兼容性测试。同时，我们为客户的App提供了多平台发布服务，包括Google play，亚马逊应用商店，91，应用汇，机锋网等等多个平台，
-                                努力让更多的用户可以下载到。</p>
-	    		</div>
-	    		<div class="am-u-lg-4 am-u-md-4 am-u-sm-12 service-img">
-	    		   <img src="/res/img/android.png" />	
-	    		</div>
-	    	</li>
-	    	<li class="am-u-lg-12 am-u-md-12 am-u-sm-12">
-	    		<div class="am-u-lg-8 am-u-md-8 am-u-sm-12 service-content">
-	    			<h4 class="w-blue">IOS(iPhone、iPad、Mac os)应用程序开发</h4>
-	    			<p>虽然Android的市场份额是绝对的王者，但是在高端手机市场领域，IOS同样成为市场的主导者。据统计，2013年，IOS全球市场份额达到
-	    				了17.6%。虽然Android市场份额要比IOS要高，在细分领域，比如教育市场、企业市场、高端市场等，IOS是绝对的王者。我们服务的客户
-	    				超过30家，他们来自不同的行业，包括房地产，服务，医疗等等。迄今为止已为客户开发了超过30款ios应用程序，其中有10款是iPad应用
-	    				程序，目前上架运营的超过20款。我们紧随时代潮流，将最新的设计理念和技术应用到项目中。</p>
-	    		</div>
-	    		<div class="am-u-lg-4 am-u-md-4 am-u-sm-12 service-img">
-	    		   <img src="${pageContext.request.contextPath}/res/img/ios.png" />	
-	    		</div>
-	    	</li>
-	    	<li class="am-u-lg-12 am-u-md-12 am-u-sm-12">
-	    		<div class="am-u-lg-8 am-u-md-8 am-u-sm-12 service-content">
-	    			<h4 class="w-blue">微信公众平台开发</h4>
-	    			<p>具腾讯官方统计，目前微信月活跃用户达到了3亿，其中海外用户更是达到了4千万。随着微信用户的不断增加，腾讯对其微信产品：公众平
-	    				台帐号的不断投入与推广，对于企业客户来说，拥有一款微信公众平台产品比拥有一个企业官方网站更重要。我们不但致力于高品质App的开
-	    				发，而且在微信公众平台二次开发方面拥有优秀开发人才和市场推广经验。迄今为止，我们已经为数十家企业开发了微信公众平台帐号。客户
-	    				可以结合微信公众平台，更好得去运营App平台和网站，不但提高了用户的数量，而且更好得拉近了与用户的距离。</p>
-	    		</div>
-	    		<div class="am-u-lg-4 am-u-md-4 am-u-sm-12 service-img">
-	    		   <img src="${pageContext.request.contextPath}/res/img/wechat.png" />
-	    		</div>
-	    	</li>
+
 	    	<c:forEach items="${list }" var="p">
 	    	<li class="am-u-lg-12 am-u-md-12 am-u-sm-12">
 	    		<div class="am-u-lg-8 am-u-md-8 am-u-sm-12 service-content">
-	    			<h4 class="w-blue"><a href="service-item/show.htm?parentId=${p.id }">${p.serviceName }</a></h4>
+	    			<h4 class="w-blue"><a class="w-blue" href="service-item/show.htm?parentId=${p.id }">${p.serviceName }</a></h4>
 	    			<p>${p.serviceContent }</p>
 	    		</div>
 	    		<div class="am-u-lg-4 am-u-md-4 am-u-sm-12 service-img">
@@ -119,7 +83,7 @@
                                   开发了微信公众平台帐号。客户可以结合微信公众平台，更好得去运营App平台和网站，不但提高了用户的数量，而且更好得拉近了与用户的距离。</p>
 	    		</div>
 	    		<div class="am-u-lg-4 am-u-md-4 am-u-sm-12 service-img">
-	    		   <img src="${pageContext.request.contextPath}/res/img/website.png" />	
+	    		   <img src="/res/img/website.png" />	
 	    		</div>
 	    	</li>
 	    	
