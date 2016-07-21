@@ -40,7 +40,7 @@ public class NewsServiceImpl implements NewsService {
 	@Override
 	public PageInfo<Article> queryByPage(Integer pageNo,Integer pageSize) {
 	    pageNo = pageNo == null?1:pageNo;
-	    pageSize = pageSize == null?10:pageSize;
+	    pageSize = pageSize == null?12:pageSize;
 	    PageHelper.startPage(pageNo, pageSize);
 	    List<Article> list = articleDao.getHotArticles();
 	    //用PageInfo对结果进行包装
@@ -51,6 +51,20 @@ public class NewsServiceImpl implements NewsService {
 	public Article queryById(Integer id) {
 		
 		return articleDao.queryById(id);
+	}
+	@Override
+	public List<Article> queryArticleTopFive() {
+		return articleDao.queryArticleTop5();
+	}
+	@Override
+	public PageInfo<Article> queryNewsByPageForType(int newsType,Integer pageNo,Integer pageSize) {
+		pageNo = pageNo == null?1:pageNo;
+	    pageSize = pageSize == null?12:pageSize;
+	    PageHelper.startPage(pageNo, pageSize);
+	    List<Article> list = articleDao.queryNewsByType(newsType);
+	    //用PageInfo对结果进行包装
+	    PageInfo<Article> page = new PageInfo<Article>(list);
+	    return page;
 	} 
 	
 }

@@ -2,6 +2,7 @@ package com.lanen.web.dao;
 
 import java.util.List;
 
+import com.lanen.web.pojo.Case;
 import com.lanen.web.pojo.ServiceItem;
 
 /**
@@ -16,5 +17,9 @@ public interface ServiceItemMapperDao {
 	
 	List<ServiceItem> queryServiceItem();
 	List<ServiceItem> queryServiceItemByParentId(int parentId);
+	
+	List<?> queryServiceCaseById(int serviceId);
+	
+	Case queryCaseNameById(int caseId);
 	
 }

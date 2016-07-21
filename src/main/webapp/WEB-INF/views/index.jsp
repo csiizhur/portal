@@ -1,381 +1,205 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head lang="en">
-  <meta charset="UTF-8">
-  <title>首页</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0,user-scalable=no">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-siteapp"/>
-  
-  <link rel="alternate icon" type="res/img/xishanlogo.png" href="res/img/xishanlogo.png">
-  <link rel="stylesheet" href="/res/css/amazeui.css"/>
-  <link rel="stylesheet" href="/res/css/style.css"/>
+<meta charset="UTF-8">
+<title>苏州西山中科药物研究有限公司</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/amazeui.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/style.css" />
+<!-- <link href="/res/css/jquery.bxslider.css" rel="stylesheet" /> -->
 </head>
 
-
-
-
-
-
-
-<body>
-<header class="am-topbar header">
-	<div class="am-container-1">
-		<div class="left hw-logo">
-		  <img class=" logo" src="res/img/xishanlogo.png"></img>
-		  <!-- <img class="word" src="res/img/hw-word.png"></img> -->
-    </div>
-  <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
-          data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span
-      class="am-icon-bars"></span></button>
-
-  <div class="am-collapse am-topbar-collapse right" id="doc-topbar-collapse">
-    
-
-    <div class=" am-topbar-left am-form-inline am-topbar-right" role="search">
-      <ul class="am-nav am-nav-pills am-topbar-nav hw-menu">
-      <li class="hw-menu-active"><a href="/index.htm">首页</a></li>
-      <li><a href="/gnsys/index.htm">功能实验室 </a></li>
-      <li><a href="/fw/index.htm">服务中心 </a></li>
-      <li><a href="/xwhd/index.htm">西山新闻动态 </a></li>
-      <li><a href="/gyxs/index.htm">关于我们</a></li>
-      <li><a href="/lxwm/index.htm">联系我们 </a></li>
-    </ul>
-    </div>
-
-  </div>
-  </div>
-</header>
-<div class="rollpic">
-	 <div data-am-widget="slider" class="am-slider am-slider-default" data-am-slider='{}' >
-	  <ul class="am-slides">
-	      <li><img src="res/img/hw_bg2.png"/></li>
-	      <li><img src="res/img/hw_bg2.png"/></li>  	
-	      <li><img src="res/img/hw_bg2.png"/></li>
-	  </ul>
-    </div>
-</div>
-<div class="am-container-1">
-	<div class="solutions part-all">
-		<div class="part-title">
-			<a href="#">
-			<i class="am-icon-lightbulb-o part-title-i"></i>
-			<span class="part-title-span">解决方案</span>
-			<p>Solutions</p>
-			</a>
-		</div>
-		<ul class="am-g part-content solutions-content">
-		  <li class="am-u-sm-6 am-u-md-3 am-u-lg-3">
-		  	<i class="am-icon-safari solution-circle"></i>
-		  	<span class="solutions-title">网站、移动网站</span>
-		  	<p class="solutions-way">微信公众号开发移动网站微信公众号开发</p>
-		  </li>
-		  <li class="am-u-sm-6 am-u-md-3 am-u-lg-3">
-		  	<i class="am-icon-magic solution-circle"></i>
-		  	<span class="solutions-title">网站、移动网站</span>
-		  	<p class="solutions-way">移动网站微信公众号开发移动网站微信公众号开发,解决方案</p>
-		  </li>
-		  <li class="am-u-sm-6 am-u-md-3 am-u-lg-3">
-		  	<i class="am-icon-phone solution-circle"></i>
-		  	<span class="solutions-title">网站、移动网站</span>
-		  	<p class="solutions-way">移动网站微信公众号开发移动网站微信公众号开发</p>
-		  </li>
-		  <li class="am-u-sm-6 am-u-md-3 am-u-lg-3">
-		  	<i class="am-icon-hacker-news solution-circle"></i>
-		  	<span class="solutions-title">网站、移动网站</span>
-		  	<p class="solutions-way">网站、移动网站微信公众号开发移动网站微信公众号开发,解决方案</p>
-		  </li>
-		  
-		</ul>
-		
-	</div>
-	</div>
-	<div class="gray-li">
-	<div class="customer-case part-all ">
-		<div class="part-title">
-			<a href="customer-case.html">
-			<i class=" am-icon-briefcase part-title-i"></i>
-			<span class="part-title-span">客户案例</span>
-			<p>Customer Case</p>
-			</a>
-		</div>
-	
-	
-		 <ul data-am-widget="gallery" class=" am-avg-sm-1
-  am-avg-md-4 am-avg-lg-4 am-gallery-bordered customer-case-content" >
-      <li class="case-li am-u-sm-6 am-u-md-6 am-u-lg-3">
-        <div class="am-gallery-item case-img1">
-            <a href="#" >
-              <img src="res/img/app1.png"  />
-                
-            </a>
-        </div>
-        <div class="case-li-mengban">
-        	<div class=" case-word">
-              <h3 class="am-gallery-title">响应式商城</h3>
-              <p>2015-06-11</p>
-              <a><span><i class="am-icon-eye"></i>查看更多</span></a>
-           </div>
-        </div>
-      </li>
-      <li class="case-li am-u-sm-6 am-u-md-6 am-u-lg-3">
-        <div class="am-gallery-item case-img1">
-            <a href="#" >
-              <img src="res/img/app2.png"  />              
-            </a>
-        </div>
-        <div class="case-li-mengban">
-        	<div class=" case-word">
-              <h3 class="am-gallery-title">物流红娘</h3>
-              <p>2015-06-11</p>
-              <a><span><i class="am-icon-eye"></i>查看更多</span></a>
-           </div>
-        </div>
-      </li>
-      <li class="case-li am-u-sm-6 am-u-md-6 am-u-lg-3">
-        <div class="am-gallery-item case-img1">
-            <a href="#" >
-              <img src="res/img/app3.png"  />             
-            </a>
-        </div>
-        <div class="case-li-mengban">
-        	<div class=" case-word">
-              <h3 class="am-gallery-title">车型湖北</h3>
-              <p>2015-06-11</p>
-              <a><span><i class="am-icon-eye"></i>查看更多</span></a>
-           </div>
-        </div>
-      </li>
-      <li class="case-li am-u-sm-6 am-u-md-6 am-u-lg-3">
-        <div class="am-gallery-item case-img1">
-            <a href="#" >
-              <img src="res/img/app4.png"  />             
-            </a>
-        </div>
-        <div class="case-li-mengban">
-        	<div class=" case-word">
-              <h3 class="am-gallery-title">管理系统</h3>
-              <p>2015-06-11</p>
-              <a><span><i class="am-icon-eye"></i>查看更多</span></a>
-           </div>
-        </div>
-      </li>
-      <li class="case-li am-u-sm-6 am-u-md-6 am-u-lg-3">
-        <div class="am-gallery-item case-img1">
-            <a href="#" >
-              <img src="res/img/app5.png"  />              
-            </a>
-        </div>
-        <div class="case-li-mengban">
-        	<div class=" case-word">
-              <h3 class="am-gallery-title">智众商城</h3>
-              <p>2015-06-11</p>
-              <a><span><i class="am-icon-eye"></i>查看更多</span></a>
-           </div>
-        </div>
-      </li>
-      <li class="case-li am-u-sm-6 am-u-md-6 am-u-lg-3">
-        <div class="am-gallery-item case-img1">
-            <a href="#" >
-              <img src="res/img/app6.png"  />                
-            </a>
-        </div>
-        <div class="case-li-mengban">
-        	<div class=" case-word">
-              <h3 class="am-gallery-title">汇众商城</h3>
-              <p>2015-06-11</p>
-              <a><span><i class="am-icon-eye"></i>查看更多</span></a>
-           </div>
-        </div>
-      </li>
-      <li class="case-li am-u-sm-6 am-u-md-6 am-u-lg-3">
-        <div class="am-gallery-item case-img1">
-            <a href="#" >
-              <img src="res/img/app7.png"  />                
-            </a>
-        </div>
-        <div class="case-li-mengban">
-        	<div class=" case-word">
-              <h3 class="am-gallery-title">无鞋网</h3>
-              <p>2015-06-11</p>
-              <a><span><i class="am-icon-eye"></i>查看更多</span></a>
-           </div>
-        </div>
-      </li>
-      <li class="case-li am-u-sm-6 am-u-md-6 am-u-lg-3">
-        <div class="am-gallery-item case-img1">
-            <a href="#" >
-              <img src="res/img/app8.png"  />               
-            </a>
-        </div>
-        <div class="case-li-mengban">
-        	<div class=" case-word">
-              <h3 class="am-gallery-title">响应式商城</h3>
-              <p>2015-06-11</p>
-              <a><span><i class="am-icon-eye"></i>查看更多</span></a>
-           </div>
-        </div>
-      </li>
-      
-  </ul>
-		<div class="lan-bott">
-			<div class="left"><span>全方位解决方案,为您轻松解决不同问题</span>
-				<p>A full range of solutions for you to solve different problems</p>
+<body class="commonbg_main">
+	<header class="am-topbar header">
+		<div class="am-container-1">
+			<div class="left hw-logo">
+				<img class=" logo" src="${pageContext.request.contextPath}/res/img/xishanlogo.png"></img>
 			</div>
-			<div class="right">
-				<a href="customer-case.html">
-					<span class="see-more">查看更多<i class="am-icon-angle-double-right"></i></span>
-				</a>
+			<button
+				class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
+				data-am-collapse="{target: '#doc-topbar-collapse'}">
+				<span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span>
+			</button>
+
+			<div class="am-collapse am-topbar-collapse right"
+				id="doc-topbar-collapse">
+
+
+				<div class=" am-topbar-left am-form-inline am-topbar-right"
+					role="search">
+					<ul class="am-nav am-nav-pills am-topbar-nav hw-menu">
+						<li class="hw-menu-active"><a href="${pageContext.request.contextPath}/index.html">首页</a></li>	
+						<li><a href="${pageContext.request.contextPath}/gyxs/index.html">关于我们</a></li>
+						<li><a href="${pageContext.request.contextPath}/gnsys/index.html">功能实验室 </a></li>
+						<li><a href="${pageContext.request.contextPath}/xwhd/index.html">新闻活动 </a></li>
+						<li><a href="${pageContext.request.contextPath}/fw/index.html">服务中心 </a></li>
+						<li><a href="${pageContext.request.contextPath}/lxwm/index.html">联系方式 </a></li>
+					</ul>
+				</div>
+
 			</div>
-			<div class="clear"></div>
 		</div>
-		<div class="part-title">
-		    	
+	</header>
+	<div class="rollpic">
+		<div data-am-widget="slider" class="am-slider am-slider-default"
+			data-am-slider='{}'>
+			<ul class="am-slides">
+				<li><img src="${pageContext.request.contextPath}/image/photo.html?imgName=1468565483907.png" /></li>
+				<li><img src="${pageContext.request.contextPath}/image/photo.html?imgName=1468565483907.png" /></li>
+				<li><img src="${pageContext.request.contextPath}/image/photo.html?imgName=1468565483907.png" /></li>
+			</ul>
 		</div>
-		</div>
-</div>	
-	
+	</div>
 
-
-
+	<div class="content">
 		
-		
-<div class=" news-all">
-	<div class="am-container-1">
-<div class="news part-all">
-		<div class="part-title">
-			<a href="news.html">
-			<i class="am-icon-newspaper-o part-title-i"></i>
-			<span class="part-title-span">新闻动态</span>
-			<p>Hengwang News</p>
-			</a>
-		</div>
-		<div class="news-content ">
-				<ul class="news-content-ul">
-					<li class="am-u-sm-12 am-u-md-6 am-u-lg-6">
-						<a href="#">
-						    <div class=" am-u-sm-12 am-u-md-12 am-u-lg-5">
-						    	<div class="news-img">
-						    	<img src="res/img/news.png"></img>
-						    	</div>
-						    </div>
-						    <div  class=" am-u-sm-12 am-u-md-12 am-u-lg-7">
-										<span class="news-right-title">关于召开年会的通知</span>
-										<p class="news-right-time">2015-06-11</p>
-										<p class="news-right-words">互联网，又称网际网路或音译因特网、英特网，是网络与网络之间所串连成的庞大网络网络与网络之...</p>
-										<a href="/xwhd/index.htm"><span class="see-more2">查看更多<i class="am-icon-angle-double-right"></i></span></a>
-								 </div>	
-						<div class="clear"></div>
-						</a>
-					</li>
-					<li class="am-u-sm-12 am-u-md-6 am-u-lg-6">
-						<a href="#">
-						    <div class=" am-u-sm-12 am-u-md-12 am-u-lg-5">
-						    	<div class="news-img">
-						    	<img src="res/img/news1.png"></img>
-						    	</div>
-						    </div>
-						    <div  class=" am-u-sm-12 am-u-md-12 am-u-lg-7">
-										<span class="news-right-title">关于召开年会的通知</span>
-										<p class="news-right-time">2015-06-11</p>
-										<p class="news-right-words">互联网，又称网际网路或音译因特网、英特网，是网络与网络之间所串连成的庞大网络网络与网络之...</p>
-										<a href="/xwhd/index.htm"><span class="see-more2">查看更多<i class="am-icon-angle-double-right"></i></span></a>
-								 </div>	
-						<div class="clear"></div>
-						</a>
-					</li>		
-					<div class="clear"></div>
+		<div class="news">
+			<div class="n_content">
+				<ul id="sliderNews">
+					<c:forEach items="${news }" var="ppp">
+					<li><a
+						href="${pageContext.request.contextPath }/xwhd/news-inform.html?newsType=${ppp.newsType }&articleId=${ppp.id}"
+						target="">${ppp.title }<span
+							class="time"><fmt:formatDate value="${ppp.createTime }" pattern="yyyy-MM-dd"></fmt:formatDate></span></a></li>
+					</c:forEach>
 				</ul>
+			</div>
+		</div>
+		<div class="mainbox1 mainbox_whitebg">
+			<div class="huoban_biaoti_main">
+				<h3>我们的服务</h3>
+			</div>
+			<!-- <div class="huobanimg_pic "> -->
+			<div class=" sList">
+				<ul>
+					<li>
+                        <div >
+                            <img src="${pageContext.request.contextPath}/res/img/pic_yao.jpg" class="toppic-title-i"></img>
+                        </div>
+                        <h3>
+                            <a href="${pageContext.request.contextPath }/fw/index.html" title='化学'>药品</a></h3>
+                        <p>
+                            <a href="${pageContext.request.contextPath }/fw/index.html">中科药物在化学药物开发方面。</a></p>
+					</li>
+					<li>
+                        <div align="center">
+                            <img src="${pageContext.request.contextPath}/res/img/pic_nong.jpg" class="toppic-title-i"></img>
+                        </div>
+                        <h3>
+                            <a href="${pageContext.request.contextPath }/fw/index.html" title='化学'>农药</a></h3>
+                        <p>
+                            <a href="${pageContext.request.contextPath }/fw/index.html">中科药物在化学药物开发方面。</a></p>
+					</li>
+					<li>
+						<div align="center">
+                            <img src="${pageContext.request.contextPath}/res/img/pic_hua.jpg" class="toppic-title-i"></img>
+                        </div>
+                        <h3>
+                            <a href="${pageContext.request.contextPath }/fw/index.html" title='化学'>新化学物质</a></h3>
+                        <p>
+                            <a href="${pageContext.request.contextPath }/fw/index.html">中科药物在化学药物开发方面。</a></p>
+					</li>
+					<li>
+						<div align="center">
+                            <img src="${pageContext.request.contextPath}/res/img/pic_dong.jpg" class="toppic-title-i"></img>
+                        </div>
+                        <h3>
+                            <a href="${pageContext.request.contextPath }/fw/index.html" title='化学'>动物模型</a></h3>
+                        <p>
+                            <a href="${pageContext.request.contextPath }/fw/index.html">中科药物在化学药物开发方面。中科药物在化学药物开发方面。中科药物在化学药物开发方面。</a></p>
+					</li>
+				</ul>
+			</div>
+			<div class="huobanimg_bottom"></div>
+
+		</div>
+		<div class="mainbox1 mainbox_whitebg">
+			<div class="huoban_biaoti_main">
+				<h3>功能实验室</h3>
+			</div>
+			<div class="huobanimg_pic">
+				<ul>
+					<li><div><img alt="" src="${pageContext.request.contextPath}/res/img/animals.png" ></div><p>实验动物房</p></li>
+					<li><div><img alt="" src="${pageContext.request.contextPath}/res/img/xwj.png" ></div><p>组织病理室</p></li>
+					<li><div><img alt="" src="${pageContext.request.contextPath}/res/img/sys.png" ></div><p>临床检验室</p></li>
+					<li><div><img alt="" src="${pageContext.request.contextPath}/res/img/fenxi.png" ></div><p>分析室</p></li>
+					<li><div><img alt="" src="${pageContext.request.contextPath}/res/img/environment.png" ></div><p>生态毒理室</p></li>
+				</ul>
+			</div>
+			<div class="huobanimg_bottom"></div>
+
+		</div>
+		<div class="mainbox1">
+			<div class="am-slider am-slider-default am-slider-carousel part-all"
+				data-am-flexslider="{itemWidth:150, itemMargin: 5, slideshow: false}"
+				style="background-color: #f0eeed; box-shadow: none;">
+				<ul class="am-slides">
+					<li><img src="${pageContext.request.contextPath}/res/img/pic_yao.jpg"/></li>
+					<li><img src="${pageContext.request.contextPath}/res/img/pic_nong.jpg"/></li>
+					<li><img src="${pageContext.request.contextPath}/res/img/pic_hua.jpg"/></li>
+					<li><img src="${pageContext.request.contextPath}/res/img/pic_dong.jpg"/></li>
+					<li><img src="${pageContext.request.contextPath}/res/img/pic_yao.jpg"/></li>
+					<li><img src="${pageContext.request.contextPath}/res/img/pic_nong.jpg"/></li>
+					<li><img src="${pageContext.request.contextPath}/res/img/pic_hua.jpg"/></li>
+					<li><img src="${pageContext.request.contextPath}/res/img/pic_dong.jpg"/></li>
+					<li><img src="${pageContext.request.contextPath}/res/img/pic_yao.jpg"/></li>
+					<li><img src="${pageContext.request.contextPath}/res/img/pic_nong.jpg"/></li>
+					<li><img src="${pageContext.request.contextPath}/res/img/pic_hua.jpg"/></li>
+					<li><img src="${pageContext.request.contextPath}/res/img/pic_dong.jpg"/></li>
+					
+				</ul>
+			</div>
+		
+		</div>
+	</div>
+	
+	<div class="foot">
+		<div class="bottom">
+			<div class="down_le bord_ri">
+				<h4>联系我们</h4>
+				<p class="siz12 col_6" style="margin: 30px 0;">
+					<img src="${pageContext.request.contextPath }/res/img/tell.png"
+						height="22" width="22">&nbsp;总公司市场部：0512-65982476 <br>
+					<img src="${pageContext.request.contextPath }/res/img/email.png"
+						height="22" width="22">&nbsp;邮箱地址：marketing@szxszk.com
+				</p>
+			</div>
+			<div class="down_ch bord_ri">
+				 <h4>实验室</h4>
+				<table class="siz12 col_6" style="margin:30px 30px 0 5px;">
+					<tr><td>实验动物房&nbsp;</td><td>&nbsp;组织病理室&nbsp;</td><td>&nbsp;实验动物房&nbsp;</td><td>&nbsp;组织病理室</td></tr>
+					<tr><td>组织病理室&nbsp;</td><td>&nbsp;组织病理室&nbsp;</td><td>&nbsp;实验动物房&nbsp;</td><td>&nbsp;组织病理室</td></tr>
+				</table>
+			</div>
+			<div class="gzwm">关注我们</div>
+			<div class="bown_ri">
+				<p style="margin: 15px 10px 20px -30px;">
+					关注西山中科<br>官方微信
+				</p>
+			</div>
+			<div class="bown_ri">
+				<a href="#"><img
+					src="${pageContext.request.contextPath}/res/img/weixin.jpg"></a>
+			</div>
 			<div class="clear"></div>
 		</div>
 	</div>
-</div>
-</div>
-<!--<div class="three-reason">
-			<div class="part-title three-reason-title">
-			<span class="part-title-span w-white">选择恒望的三大理由</span>
-			<p class="w-white">Why Choose Hengwang</p>
-			
+	<DIV class="bot">
+		<div class="bot1000">
+			<span> 苏州西山中科药物研究有限公司 版权所有 任何单位及个人未经许可不可擅自使用</span> <br /> <span>©
+				SAC -2016 苏ICP备12008164号</span>&nbsp;
 		</div>
-			<ul class="am-g part-content three-reason-content">
-			  <li class="am-u-sm-4 am-u-md-4 am-u-lg-4">
-			  	<div class="three-reason-img1 "></div>
-			  	<p class="reason-title w-white">规模优势<br/>Scale advantage</p>
-			  </li>
-			  <li class="am-u-sm-4 am-u-md-4 am-u-lg-4">
-			  	<div class="three-reason-img2 "></div>
-			  	<p class="reason-title w-white ">领先技术<br/>Leading technology</p>
-			  </li>
-			  <li class="am-u-sm-4 am-u-md-4 am-u-lg-4">
-			  	<div class="three-reason-img3 "></div>
-			  	<p class="reason-title w-white">整合能力<br/>Integration capability</p>
-			  </li>
-		</ul>
-		</div>-->
-<div class="part-all gray-li">
-<div class="customer  am-container-1">
-		<div class="part-title">
-			<i class="am-icon-users part-title-i"></i>
-			<span class="part-title-span">服务客户</span>
-			<p>Serve Customers</p>
-		</div>
-		
-		<div class="am-slider am-slider-default am-slider-carousel part-all" data-am-flexslider="{itemWidth:150, itemMargin: 5, slideshow: false}" style="  background-color: #f0eeed; box-shadow:none;">
-  <ul class="am-slides">
-    <li><img src="res/img/ptn4.png"/></li>
-    <li><img src="res/img/ptn5.png"/></li>
-    <li><img src="res/img/ptn6.png"/></li>
-    <li><img src="res/img/ptn7.png"/></li>
-    <li><img src="res/img/ptn8.png"/></li>
-    <li><img src="res/img/ptn4.png"/></li>
-    <li><img src="res/img/ptn5.png"/></li>
-    <li><img src="res/img/ptn6.png"/></li>
-    <li><img src="res/img/ptn7.png"/></li>
-    <li><img src="res/img/ptn8.png"/></li>
-  </ul>
-</div>
-		
-</div>
-</div>
-<footer class="footer ">
-	
-<ul>
-        
-        <li class="am-u-lg-4 am-u-md-4 am-u-sm-12 part-5-li2">
-            <div class="part-5-title">联系我们</div>
-            <div class="part-5-words2">
-                <span>地址:苏州市吴中区吴中大道1336号</span>
-                <span>电话:www.suzhouresearch.com</span>
-                <span>传真:0512-65982476</span>
-                <span>邮箱:marketing@szxszk.com</span>
-                <span><i class="am-icon-phone"></i><em >0512-65982476（市场部）</em></span>
-            </div>
-        </li>
-        <li class="am-u-lg-4 am-u-md-4 am-u-sm-12 ">
-            <div class="part-5-title">相关链接</div>
-            <div class="part-5-words2">
-                <ul class="part-5-words2-ul">
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="solutions.html">解决方案</a></li>
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="product-show.html">产品展示</a></li>
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="customer-case.html">客户案例</a></li>
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="service-center.html">服务中心</a></li>
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="about-us.html">关于我们</a></li>
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="recruit.html">招贤纳士</a></li>
-                    <div class="clear"></div>
-                </ul>
-            </div>
-        </li>
-        <div class="clear"></div>
-    </ul>
-   
-</footer>
-
-
+	</DIV>
 </body>
 <!--[if lt IE 9]>
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
@@ -386,9 +210,34 @@
 <!--[if (gte IE 9)|!(IE)]><!-->
 <script src="res/js/jquery.min.js"></script>
 <!--<![endif]-->
-<script src="res/js/amazeui.min.js"></script>
-<script src="res/js/scroll.js"></script>
+<script src="${pageContext.request.contextPath}/res/js/amazeui.min.js"></script>
+<script src="${pageContext.request.contextPath}/res/js/scroll.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/res/js/jquery.bxslider.min.js"></script>
 <script type="text/javascript">
 
+	$(function() {
+		 var sliderNews =  $("#sliderNews").bxSlider({
+			displaySlideQty : 1,
+			moveSlideQty : 1,
+			controls : false,
+			mode : 'vertical',
+			pause : 3000,
+			auto : true,
+			autoHover: true,
+			pager:false
+			});
+	})
+	/* $(document).ready(function(){
+		  $('#sliderNews').bxSlider({
+				displaySlideQty : 1,
+				moveSlideQty : 1,
+				controls : false,
+				mode : 'vertical',
+				pause : 5000,
+				auto : true,
+				autoHover: true,
+				pager:false
+				});
+	}); */
 </script>
 </html>

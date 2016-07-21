@@ -1,76 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp" xmlns:web="http://java.sun.com/xml/ns/javaee" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd http://www.springframework.org/schema/websocket http://www.springframework.org/schema/websocket/spring-websocket.xsd" id="WebApp_ID" version="3.0">
-  <display-name>Archetype Created Web Application</display-name>
-  
-  <context-param>
-  	<param-name>contextConfigLocation</param-name>
-  	<param-value>classpath:config/spring/spring.xml</param-value>
-  </context-param>
-  <context-param>
-  	<param-name>log4jConfigLocation</param-name>
-  	<param-value>classpath:config/properties/log4j.properties</param-value>
-  </context-param>
-  <listener>
-  	<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
-  </listener>
-  
-  <filter>
-  	<description>spring编码转换过滤器</description>
-  	<filter-name>encodingFilter</filter-name>
-  	<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
-  	<init-param>
-  		<param-name>encoding</param-name>
-  		<param-value>UTF-8</param-value>
-  	</init-param>
-  	<init-param>
-  		<param-name>forceEncoding</param-name>
-  		<param-value>true</param-value>
-  	</init-param>
-  </filter>
-  <filter-mapping>
-  	<!-- <description>过滤器的匹配URL</description> -->
-  	<filter-name>encodingFilter</filter-name>
-  	<url-pattern>*.html</url-pattern>
-  </filter-mapping>
-  
-  <listener>
-  	<description>spring监听器</description>
-  	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-  </listener>
-  <listener>
-  	<description>spring缓存清除监听器</description>
-  	<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
-  </listener>
-  
-  <servlet>
-  	<description>springmvc的servlet</description>
-  	<servlet-name>springMvc</servlet-name>
-  	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-  	<init-param>
-  		<description>springmvc配置文件</description>
-  		<param-name>contextConfigLocation</param-name>
-  		<param-value>classpath:config/spring/spring-mvc.xml</param-value>
-  	</init-param>
-  	<load-on-startup>1</load-on-startup>
-  </servlet>
-  
-  <servlet-mapping>
-  	<servlet-name>springMvc</servlet-name>
-  	<url-pattern>*.htm</url-pattern>
-  </servlet-mapping>
-  
-  <session-config>
-  	<session-timeout>300</session-timeout>
-  </session-config>
-  
-  <welcome-file-list>
-    <welcome-file>/WEB-INF/views/index.jsp</welcome-file>
-  </welcome-file-list>
-  
-  <!-- 自定义一个servlet -->
-  <!-- <servlet>
-  	<servlet-name>url-interface</servlet-name>
-  	<servlet-class>com.lanen.web.start.InterfaceUrlIntiServlet</servlet-class>
-  	<load-on-startup>1</load-on-startup>
-  </servlet> -->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp" xmlns:web="http://java.sun.com/xml/ns/javaee"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd http://www.springframework.org/schema/websocket http://www.springframework.org/schema/websocket/spring-websocket.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>Archetype Created Web Application</display-name>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:config/spring/spring.xml</param-value>
+	</context-param>
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>classpath:config/properties/log4j.properties</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>logbackConfigLocation</param-name>
+		<param-value>classpath:config/properties/logback.xml</param-value>
+	</context-param>
+	<listener>
+		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>ch.qos.logback.ext.spring.web.LogbackConfigListener</listener-class>
+	</listener>
+	<filter>
+		<description>spring编码转换过滤器</description>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<!-- <description>过滤器的匹配URL</description> -->
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>*.html</url-pattern>
+	</filter-mapping>
+
+	<listener>
+		<description>spring监听器</description>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<listener>
+		<description>spring缓存清除监听器</description>
+		<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+	</listener>
+
+	<servlet>
+		<description>springmvc的servlet</description>
+		<servlet-name>springMvc</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<description>springmvc配置文件</description>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:config/spring/spring-mvc.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>springMvc</servlet-name>
+		<url-pattern>*.html</url-pattern>
+	</servlet-mapping>
+
+	<!-- 检测开发环境，/druid/index.html -->
+	<servlet>
+		<servlet-name>druidStatView</servlet-name>
+		<servlet-class>com.alibaba.druid.support.http.StatViewServlet</servlet-class>
+		<init-param>
+			<param-name>allow</param-name>
+			<param-value>127.0.0.1</param-value>
+		</init-param>
+		<init-param>
+			<param-name>deny</param-name>
+			<param-value>192.168.1.107</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>druidStatView</servlet-name>
+		<url-pattern>/druid/*</url-pattern>
+	</servlet-mapping>
+	
+	<session-config>
+		<session-timeout>300</session-timeout>
+	</session-config>
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+		<!-- <welcome-file>/WEB-INF/views/index.jsp</welcome-file> -->
+	</welcome-file-list>
+
+	<!-- <jsp-config> <taglib> <taglib-uri>/prev-tag</taglib-uri> <taglib-location>prev.tld</taglib-location> 
+		</taglib> </jsp-config> -->
+	<!-- 自定义一个servlet -->
+	<!-- <servlet> <servlet-name>url-interface</servlet-name> <servlet-class>com.lanen.web.start.InterfaceUrlIntiServlet</servlet-class> 
+		<load-on-startup>1</load-on-startup> </servlet> -->
 </web-app>

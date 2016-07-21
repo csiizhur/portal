@@ -12,18 +12,18 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.github.pagehelper.PageInfo;
 import com.lanen.web.pojo.Article;
-import com.lanen.web.service.impl.BaseServiceImpl;
+import com.lanen.web.service.impl.NewsServiceImpl;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "classpath:config/spring/spring.xml")
 public class PageTest {
 
 	@Resource
-	private BaseServiceImpl baseService;
+	private NewsServiceImpl baseService;
 
 	@Test
 	public void queryByPageTest() {
-		PageInfo<Article> page = baseService.queryByPage(null, 2, null);
+		PageInfo<Article> page = baseService.queryByPage( 2, null);
 		System.out.println(page.getList().size() + "长度");
 		List<?> ll = page.getList();
 		long t1, t2;

@@ -1,5 +1,7 @@
 package com.lanen.web.dao;
 
+import java.util.List;
+
 import com.lanen.web.pojo.Laboratory;
 
 /**
@@ -12,6 +14,10 @@ import com.lanen.web.pojo.Laboratory;
 public interface LaboratoryMapperDao {
 	
 	
-	Laboratory queryLabByType(int laboratoryType);
+	List<Laboratory> queryLabByType(int laboratoryType);
+	
+	List<Laboratory> queryLabTop8();
+	
+	Laboratory queryLabById(int id);
 	
 }

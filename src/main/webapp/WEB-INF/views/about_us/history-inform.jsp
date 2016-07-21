@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="f" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -12,16 +14,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="Cache-Control" content="no-siteapp"/>
   
-  <link rel="alternate icon" type="img/hengwang-1.png" href="/res/img/xishanlogo.png">
-  <link rel="stylesheet" href="/res/css/amazeui.css"/>
-  <link rel="stylesheet" href="/res/css/style.css"/>
+  <link rel="alternate icon" href="${pageContext.request.contextPath}/res/img/xishanlogo.png">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/amazeui.css"/>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/style.css"/>
 </head>
-<body>
+<body class="commonbg_main">
 <header class="am-topbar header">
 	<div class="am-container-1">
 		<div class="left hw-logo">
-		  <img class=" logo" src="/res/img/xishanlogo.png"></img>
-		  <img class="word" src="/res/img/xishanlogo.png"></img>
+		  <img class=" logo" src="${pageContext.request.contextPath}/res/img/xishanlogo.png"></img>
     </div>
   <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
           data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span
@@ -32,12 +33,12 @@
 
     <div class=" am-topbar-left am-form-inline am-topbar-right" role="search">
       <ul class="am-nav am-nav-pills am-topbar-nav hw-menu">
-      <li><a href="/index.htm">首页</a></li>
-      <li><a href="../gnsys/index.htm">功能实验室</a></li>
-      <li class="hw-menu-active"><a href="../fw/index.htm">服务中心 </a></li>
-      <li><a href="../xwhd/index.htm">新闻动态 </a></li>
-      <li><a href="../gyxs/index.html">关于我们</a></li>
-      <li><a href="../lxwm/index.html">联系我们</a></li>
+      <li><a href="${pageContext.request.contextPath}/index.html">首页</a></li>
+      <li class="hw-menu-active"><a href="${pageContext.request.contextPath}/gyxs/index.html">关于我们</a></li>
+      <li><a href="${pageContext.request.contextPath}/gnsys/index.html">功能实验室</a></li>
+      <li><a href="${pageContext.request.contextPath}/xwhd/index.html">新闻动态 </a></li>
+      <li><a href="${pageContext.request.contextPath}/fw/index.html">服务中心 </a></li> 
+      <li><a href="${pageContext.request.contextPath}/lxwm/index.html">联系我们</a></li>
     </ul>
     </div>
 
@@ -49,139 +50,101 @@
 	 <div class="toppic-title left">
 			<i class="am-icon-calculator toppic-title-i"></i>
 			<span class="toppic-title-span">历史沿革</span>
-			<p>Organize Center</p>
+			<p>History Center</p>
 		</div>
 		<div class="right toppic-progress">
-			<span><a href="/index.htm" class="w-white">首页</a></span>
+			<span><a href="/gyxs/index.html" class="w-white">关于西山</a></span>
 			<i class=" am-icon-arrow-circle-right w-white"></i>
-			<span><a href="/gyxs/index.htm" class="w-white">历史沿革</a></span>
+			<span><a href="/index.html" class="w-white">首页</a></span>
 		</div>
 	</div>
 </div>
 
-<div class=" am-container-1">
-	<div class="service-center">
-	    <ul class="service-ul">
-	    	<li class="am-u-lg-12 am-u-md-12 am-u-sm-12">
-	    		<div class="am-u-lg-8 am-u-md-8 am-u-sm-12 service-content">
-	    			<h4 class="w-blue">Android应用程序开发</h4>
-	    			<p>据统计，2013年，Android全球市场份额达到了78.6%，而中国市场也达到了78%。在移动操作市场，Android已经成为不可动摇的王者。
-                                针对目前Android平台日益严重的碎片化问题，我们提供了多种解决方案，针对不同的系统版本，设备型号和设备分辨率，我们提供了全面
-                                的兼容性测试。同时，我们为客户的App提供了多平台发布服务，包括Google play，亚马逊应用商店，91，应用汇，机锋网等等多个平台，
-                                努力让更多的用户可以下载到。</p>
-	    		</div>
-	    		<div class="am-u-lg-4 am-u-md-4 am-u-sm-12 service-img">
-	    		   <img src="/res/img/android.png" />	
-	    		</div>
-	    	</li>
-	    	<li class="am-u-lg-12 am-u-md-12 am-u-sm-12">
-	    		<div class="am-u-lg-8 am-u-md-8 am-u-sm-12 service-content">
-	    			<h4 class="w-blue">IOS(iPhone、iPad、Mac os)应用程序开发</h4>
-	    			<p>虽然Android的市场份额是绝对的王者，但是在高端手机市场领域，IOS同样成为市场的主导者。据统计，2013年，IOS全球市场份额达到
-	    				了17.6%。虽然Android市场份额要比IOS要高，在细分领域，比如教育市场、企业市场、高端市场等，IOS是绝对的王者。我们服务的客户
-	    				超过30家，他们来自不同的行业，包括房地产，服务，医疗等等。迄今为止已为客户开发了超过30款ios应用程序，其中有10款是iPad应用
-	    				程序，目前上架运营的超过20款。我们紧随时代潮流，将最新的设计理念和技术应用到项目中。</p>
-	    		</div>
-	    		<div class="am-u-lg-4 am-u-md-4 am-u-sm-12 service-img">
-	    		   <img src="/res/img/ios.png" />	
-	    		</div>
-	    	</li>
-	    	<li class="am-u-lg-12 am-u-md-12 am-u-sm-12">
-	    		<div class="am-u-lg-8 am-u-md-8 am-u-sm-12 service-content">
-	    			<h4 class="w-blue">微信公众平台开发</h4>
-	    			<p>具腾讯官方统计，目前微信月活跃用户达到了3亿，其中海外用户更是达到了4千万。随着微信用户的不断增加，腾讯对其微信产品：公众平
-	    				台帐号的不断投入与推广，对于企业客户来说，拥有一款微信公众平台产品比拥有一个企业官方网站更重要。我们不但致力于高品质App的开
-	    				发，而且在微信公众平台二次开发方面拥有优秀开发人才和市场推广经验。迄今为止，我们已经为数十家企业开发了微信公众平台帐号。客户
-	    				可以结合微信公众平台，更好得去运营App平台和网站，不但提高了用户的数量，而且更好得拉近了与用户的距离。</p>
-	    		</div>
-	    		<div class="am-u-lg-4 am-u-md-4 am-u-sm-12 service-img">
-	    		   <img src="/res/img/wechat.png" />
-	    		</div>
-	    	</li>
-	    	<li class="am-u-lg-12 am-u-md-12 am-u-sm-12">
-	    		<div class="am-u-lg-8 am-u-md-8 am-u-sm-12 service-content">
-	    			<h4 class="w-blue">服务器接口开发</h4>
-	    			<p>无论ios平台、android平台、windows phone平台还是微信公众帐号平台，要想保持程序运行的稳定性、即时性，必须要有一个优良的服
-	    				务器平台作为支撑。我们为客户提供了全球领先的服务器开发语言PHP和JAVA。根据客户的不同需求选择不同的开发语言，我们的服务器接
-	    				口性能优良，支持十万百万级的用户并发量。</p>
-	    		</div>
-	    		<div class="am-u-lg-4 am-u-md-4 am-u-sm-12 service-img">
-	    		   <img src="/res/img/webservice.png" />	
-	    		</div>
-	    	</li>
-	    	<li class="am-u-lg-12 am-u-md-12 am-u-sm-12">
-	    		<div class="am-u-lg-8 am-u-md-8 am-u-sm-12 service-content">
-	    			<h4 class="w-blue">企业网站开发</h4>
-	    			<p>作为企业形象的门面，一个好的企业网站为客户的产品。武汉恒望不断致力于移动互联网产品的开发服务，更注重企业网站。
-                                  我们不但致力于高品质App的开发，而且在微信公众平台二次开发方面拥有优秀开发人才和市场推广经验。迄今为止，我们已经为数十家企业
-                                  开发了微信公众平台帐号。客户可以结合微信公众平台，更好得去运营App平台和网站，不但提高了用户的数量，而且更好得拉近了与用户的距离。</p>
-	    		</div>
-	    		<div class="am-u-lg-4 am-u-md-4 am-u-sm-12 service-img">
-	    		   <img src="/res/img/website.png" />	
-	    		</div>
-	    	</li>
-	    	<li class="am-u-lg-12 am-u-md-12 am-u-sm-12">
-	    		<div class="am-u-lg-8 am-u-md-8 am-u-sm-12 service-content">
-	    			<h4 class="w-blue">手机移动网站开发</h4>
-	    			<p>随着智能手机用户数量的爆发式增长，企业在拥有一个桌面版的网站的同时，更需要拥有一个适配智能手机的移动版网站。事实证明，拥有移
-	    				动版的网站，可以让您的网站在移动版百度搜索结果里面拥有更好的排名。我们为客户提供了基于HTML5+CSS3+JQuery Mobile的移动版网站开
-	    				发前端技术，使客户的网站在多种平台多种分辨率下拥有统一的显示效果，另外可以实现更炫的动态效果。</p>
-	    		</div>
-	    		<div class="am-u-lg-4 am-u-md-4 am-u-sm-12 service-img">
-	    		   <img src="/res/img/mwebsite.png" />
-	    		</div>
-	    	</li>
-	    </ul>
-	</div>
-</div>
-
-
-
-
-
-
-<footer class="footer ">
-	
+<div class="content">
+<div class="submenu">
 <ul>
-        
-        <li class="am-u-lg-4 am-u-md-4 am-u-sm-12 part-5-li2">
-            <div class="part-5-title">联系我们</div>
-            <div class="part-5-words2">
-                <span>地址:苏州市吴中区吴中大道1336号</span>
-                <span>电话:www.suzhouresearch.com</span>
-                <span>传真:0512-65982476</span>
-                <span>邮箱:marketing@szxszk.com</span>
-                <span><i class="am-icon-phone"></i><em >0512-65982476（市场部）</em></span>
-            </div>
-        </li>
-        <li class="am-u-lg-4 am-u-md-4 am-u-sm-12 ">
-            <div class="part-5-title">相关链接</div>
-            <div class="part-5-words2">
-                <ul class="part-5-words2-ul">
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="solutions.html">解决方案</a></li>
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="product-show.html">产品展示</a></li>
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="customer-case.html">客户案例</a></li>
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="service-center.html">服务中心</a></li>
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="about-us.html">关于我们</a></li>
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="recruit.html">招贤纳士</a></li>
-                    <div class="clear"></div>
-                </ul>
-            </div>
-        </li>
-        <div class="clear"></div>
+<li class="list-link"><a href="company-inform.html">公司介绍</a></li>
+						<li class="list-link"><a href="organize-inform.html">组织机构</a></li>
+						<li class="list-link"><a href="team-inform.html">技术团队</a></li>
+						<li class="list-link"><a href="ent-culture-inform.html">企业文化</a></li>
+						<li class="list-link"><a href="honor-inform.html">资质荣誉</a></li>
+						<li class="list-link"><a href="history-inform.html">历史沿革</a></li>
     </ul>
-   
-</footer>
+    </div>     
+ <div class="mainbox">
+		
+	     <div class="aboutcsii_history">
+	     				<c:forEach items="${list }" var="list">
+								     <table class="aboutcsii_history_table">
+						<tbody><tr>
+							<td class="aboutcsii_history_month"><f:formatDate value="${list.historyYear }" pattern="yyyy"></f:formatDate></td>
+							<td>
+							<p>
+							<span style="text-transform: none; background-color: rgb(255,255,255); text-indent: 0px; display: inline !important; font: 14px/20px 宋体; white-space: normal; float: none; letter-spacing: normal; color: rgb(67,67,67); word-spacing: 0px; -webkit-text-stroke-width: 0px">·</span>
+							${list.historyInfo1 }<br>
+							<span style="text-transform: none; background-color: rgb(255,255,255); text-indent: 0px; display: inline !important; font: 14px/20px 宋体; white-space: normal; float: none; letter-spacing: normal; color: rgb(67,67,67); word-spacing: 0px; -webkit-text-stroke-width: 0px">·</span>
+							${list.historyInfo2 }<br>
+							<span style="text-transform: none; background-color: rgb(255,255,255); text-indent: 0px; display: inline !important; font: 14px/20px 宋体; white-space: normal; float: none; letter-spacing: normal; color: rgb(67,67,67); word-spacing: 0px; -webkit-text-stroke-width: 0px">·</span>
+							${list.historyInfo3 }<br>
+							&nbsp;</p></td>
+						</tr>
+					     </tbody></table>
+						 <table class="yinying">
+							<tbody><tr>
+							<td></td>
+						   </tr>
+					     </tbody></table>					     
+					     </c:forEach>					     
+	     </div>
+</div>
+    
+   </div>
 
-
+<div class="foot">
+		<div class="bottom">
+			<div class="down_le bord_ri">
+				<h4>联系我们</h4>
+				<p class="siz12 col_6" style="margin: 30px 0;">
+					<img src="/res/img/tell.png"
+						height="18" width="18">&nbsp;总公司市场部：0512-65982476 <br>
+					<img src="/res/img/email.png"
+						height="18" width="18">&nbsp;邮箱地址：marketing@szxszk.com
+				</p>
+			</div>
+			<div class="down_ch bord_ri">
+				 <h4>实验室</h4>
+				<table class="siz12 col_6" style="margin:30px 30px 0 5px;">
+					<tr><td>实验动物房&nbsp;</td><td>&nbsp;组织病理室&nbsp;</td><td>&nbsp;实验动物房&nbsp;</td><td>&nbsp;组织病理室</td></tr>
+					<tr><td>组织病理室&nbsp;</td><td>&nbsp;组织病理室&nbsp;</td><td>&nbsp;实验动物房&nbsp;</td><td>&nbsp;组织病理室</td></tr>
+				</table>
+			</div>
+			<div class="gzwm">关注我们</div>
+			<div class="bown_ri">
+				<p style="margin: 15px 10px 20px -30px;">
+					关注西山<br>官方微信
+				</p>
+			</div>
+			<div class="bown_ri">
+				<a href="#"><img
+					src="${pageContext.request.contextPath}/res/img/weixin.jpg"></a>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<DIV class="bot">
+		<div class="bot1000">
+			<span> 苏州西山中科药物研究有限公司 版权所有 任何单位及个人未经许可不可擅自使用</span> <br /> <span>©
+				SAC -2016 苏ICP备12008164号</span>&nbsp;
+		</div>
+	</DIV>
 </body>
 <!--[if lt IE 9]>
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
 <script src="assets/js/amazeui.ie8polyfill.min.js"></script>
 <![endif]-->
-<script src="/res/js/jquery.min.js"></script>
-<script src="/res/js/amazeui.min.js"></script>
+<script src="${pageContext.request.contextPath}/res/js/jquery.min.js"></script>
+<script src="${pageContext.request.contextPath}/res/js/amazeui.min.js"></script>
 <!--[if (gte IE 9)|!(IE)]><!-->
 
 </html>

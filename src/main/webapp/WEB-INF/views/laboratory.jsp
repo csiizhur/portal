@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -12,16 +13,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="Cache-Control" content="no-siteapp"/>
   
-  <link rel="alternate icon" type="/res/img/hengwang-1.png" href="/res/img/xishanlogo.png">
-  <link rel="stylesheet" href="/res/css/amazeui.css"/>
-  <link rel="stylesheet" href="/res/css/style.css"/>
+  <link rel="alternate icon" type="/res/img/hengwang-1.png" href="${pageContext.request.contextPath}/res/img/xishanlogo.png">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/amazeui.css"/>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/style.css"/>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/res/iconfont/iconfont.css"/>
 </head>
 <body>
 <header class="am-topbar header">
 	<div class="am-container-1">
 		<div class="left hw-logo">
-		  <img class=" logo" src="/res/img/xishanlogo.png"></img>
-		  <img class="word" src="/res/img/xishanlogo.png"></img>
+		  <img class=" logo" src="${pageContext.request.contextPath}/res/img/xishanlogo.png"></img>
     </div>
   <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
           data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span
@@ -32,12 +33,12 @@
 
     <div class=" am-topbar-left am-form-inline am-topbar-right" role="search">
       <ul class="am-nav am-nav-pills am-topbar-nav hw-menu">
-      <li><a href="${pageContext.request.contextPath }/index.htm">首页</a></li>
-      <li class="hw-menu-active"><a href="/gnsys/index.htm">功能实验室</a></li>
-      <li><a href="/fw/index.htm">服务中心 </a></li>
-      <li><a href="/xwhd/index.htm">新闻动态 </a></li>
-      <li><a href="/gyxs/index.htm">关于我们</a></li>
-      <li><a href="/lxwm/index.htm">联系我们</a></li>
+      <li><a href="${pageContext.request.contextPath}/index.html">首页</a></li>
+      <li><a href="${pageContext.request.contextPath}/gyxs/index.html">关于我们</a></li>
+      <li class="hw-menu-active"><a href="${pageContext.request.contextPath}/gnsys/index.html">功能实验室</a></li>
+      <li><a href="${pageContext.request.contextPath}/xwhd/index.html">新闻动态 </a></li>
+      <li><a href="${pageContext.request.contextPath}/fw/index.html">服务中心 </a></li>
+      <li><a href="${pageContext.request.contextPath}/lxwm/index.html">联系我们</a></li>
     </ul>
     </div>
 
@@ -52,9 +53,9 @@
 			<p>Solutions</p>
 		</div>
 		<div class="right toppic-progress">
-			<span><a href="index.html" class="w-white">首页</a></span>
+			<span><a href="javascript:history.go(-1);" class="w-white">返回</a></span>
 			<i class=" am-icon-arrow-circle-right w-white"></i>
-			<span><a href="solutions.html" class="w-white">功能实验室</a></span>
+			<span><a href="${pageContext.request.contextPath}/index.html" class="w-white">首页</a></span>
 		</div>
 	</div>
 </div>
@@ -65,322 +66,214 @@
    <div data-am-widget="tabs"class="am-tabs am-tabs-d2 ">
 
       <ul class="am-tabs-nav am-cf solutions-tabs-ul ">
-         <li class="am-active solutions-tabs-ul-li1" ><a href="[data-tab-panel-0]" ><i class=" am-icon-desktop my-add-style"></i><span>实验动物房</span></a></li>
-         <li class="solutions-tabs-ul-li2"><a href="[data-tab-panel-1]"><i class=" am-icon-mobile-phone mobile-phone my-add-style"></i><span>组织病理室</span></a></li>
-         <li class="solutions-tabs-ul-li3"><a href="[data-tab-panel-2]" ><i class=" am-icon-check my-add-style"></i><span>临床检验室</span></a></li>
-         <li class="solutions-tabs-ul-li4"><a href="[data-tab-panel-3]"><i class=" am-icon-mobile-phone mobile-phone my-add-style"></i><span>一般毒理室</span></a></li>
-         <li class="am-active solutions-tabs-ul-li1"><a href="[data-tab-panel-4]" ><i class=" am-icon-desktop my-add-style"></i><span>分析室</span></a></li>
-         <li class="solutions-tabs-ul-li2"><a href="[data-tab-panel-5]"><i class=" am-icon-mobile-phone mobile-phone my-add-style"></i><span>细胞生物室</span></a></li>
-         <li class="solutions-tabs-ul-li3"><a href="[data-tab-panel-6]" ><i class=" am-icon-desktop my-add-style"></i><span>供试品室</span></a></li>
-         <li class="solutions-tabs-ul-li4"><a href="[data-tab-panel-7]"><i class=" am-icon-mobile-phone mobile-phone my-add-style"></i><span>档案室</span></a></li>
-         <li class="am-active solutions-tabs-ul-li1"><a href="[data-tab-panel-8]" ><i class=" am-icon-desktop my-add-style"></i><span>环境毒理室</span></a></li>
-         <li class="solutions-tabs-ul-li2"><a href="[data-tab-panel-9]"><i class=" am-icon-mobile-phone mobile-phone my-add-style"></i><span>信息中心</span></a></li>
-         <li class="solutions-tabs-ul-li3"><a href="[data-tab-panel-10]" ><i class=" am-icon-desktop my-add-style"></i><span>质量保证部</span></a></li>
+         <li class="am-active solutions-tabs-ul-li1" ><a href="[data-tab-panel-0]" ><i class=" iconfont my-add-style">&#xe603;</i><span>实验动物房</span></a></li>
+         <li class="solutions-tabs-ul-li2"><a href="[data-tab-panel-1]"><i class=" iconfont my-add-style">&#xe602;</i><span>组织病理室</span></a></li>
+         <li class="solutions-tabs-ul-li3"><a href="[data-tab-panel-2]" ><i class="iconfont my-add-style">&#xe608;</i><span>临床检验室</span></a></li>
+         <li class="solutions-tabs-ul-li4"><a href="[data-tab-panel-3]"><i class=" iconfont my-add-style">&#xe606;</i><span>一般毒理室</span></a></li>
+         <li class="solutions-tabs-ul-li1"><a href="[data-tab-panel-4]" ><i class="iconfont my-add-style">&#xe609;</i><span>分析室</span></a></li>
+         <li class="solutions-tabs-ul-li2"><a href="[data-tab-panel-5]"><i class=" iconfont my-add-style">&#xe604;</i><span>细胞生物室</span></a></li>
+         <li class="solutions-tabs-ul-li3"><a href="[data-tab-panel-6]" ><i class="iconfont my-add-style">&#xe601;</i><span>供试品室</span></a></li>
+         <li class="solutions-tabs-ul-li4"><a href="[data-tab-panel-7]"><i class="iconfont my-add-style">&#xe607;</i><span>档案室</span></a></li>
+         <li class="solutions-tabs-ul-li1"><a href="[data-tab-panel-8]" ><i class="iconfont my-add-style">&#xe60a;</i><span>环境毒理室</span></a></li>
+         <li class="solutions-tabs-ul-li2"><a href="[data-tab-panel-9]"><i class="iconfont my-add-style">&#xe600;</i><span>信息中心</span></a></li>
+         <li class="solutions-tabs-ul-li3"><a href="[data-tab-panel-10]" ><i class="iconfont my-add-style">&#xe605;</i><span>质量保证部</span></a></li>
       </ul>
 
       <div class="am-tabs-bd solutions-tabs-content ">
           <div data-tab-panel-0 class="am-tab-panel am-active">
           	<ul class=" solutions-content-ul">
+          		<c:forEach items="${l1 }" var="l1">
             	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
-            		<a href="gnsysInfo.htm?type=1">
+            		<a href="gnsysInfo.html?laboratoryId=${l1.id }">
             		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="/res/img/app1.png" />
+            			<img src="${l1.laboratoryPic }" />
             		</div>
             		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>实验动物房</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
+            			<h5>${l1.laboratoryName }</h5>
+            			<p>${l1.laboratoryInfo }</p>
             		</div>
             		</a>
             	</li>
-            	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
-            		<a href="#/gnsysInfo.htm?type=2">
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="/res/img/app2.png" />
-            		</div>
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>实验动物房2</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
-            		</div>
-            		</a>
-            	</li>
+            	</c:forEach>
             	<div class="clear"></div>
             </ul>
             
           </div>
           <div data-tab-panel-1 class="am-tab-panel ">
              <ul class="am-container-1 solutions-content-ul">
+             	<c:forEach items="${l2 }" var="l2">
             	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
-            		<a href="gnsysInfo.htm?type=3">
+            		<a href="gnsysInfo.html?laboratoryId=${l2.id }">
             		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="/res/img/app1.png" />
+            			<img src="${l2.laboratoryPic }" />
             		</div>
             		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>组织病理室</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
+            			<h5>${l2.laboratoryName }</h5>
+            			<p>${l2.laboratoryInfo }</p>
             		</div>
             		</a>
             	</li>
-            	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
-            		<a href="gnsysInfo.htm?type=4">
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="/res/img/app2.png" />
-            		</div>
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>组织病理室2</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
-            		</div>
-            		</a>
-            	</li>
-            	
-            	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12  am-u-end">
-            		<a href="gnsysInfo.htm?type=5">
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="/res/img/app2.png" />
-            		</div>
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>组织病理室3</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
-            		</div>
-            	</li>
+            	</c:forEach>
             	</a>
             </ul>
           </div>
           <div data-tab-panel-2 class="am-tab-panel ">
             <ul class="am-container-1 solutions-content-ul">
+            	<c:forEach items="${l3 }" var="l3">
             	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
-            		<a href="gnsysInfo.htm?type=6">
+            		<a href="gnsysInfo.html?laboratoryId=${l3.id }">
             		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="/res/img/app1.png" />
+            			<img src="${l3.laboratoryPic }" />
             		</div>
             		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>临床检验室</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
+            			<h5>${l3.laboratoryName }</h5>
+            			<p>${l3.laboratoryInfo }</p>
             		</div>
             		</a>
             	</li>
-            	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
-            		<a href="gnsysInfo.htm?type=7">
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="/res/img/app2.png" />
-            		</div>
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>临床检验室2</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
-            		</div>
-            		</a>
-            	</li>
+            	</c:forEach>
             </ul>
           </div>
           <div data-tab-panel-3 class="am-tab-panel ">
             <ul class="am-container-1 solutions-content-ul">
-            	<a href="gnsysInfo.htm?type=8">
+            	<c:forEach var="l4" items="${l4 }">
             	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
+            		<a href="gnsysInfo.html?laboratoryId=${l4.id }">
             		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="/res/img/app1.png" />
+            			<img src="${l4.laboratoryPic }" />
             		</div>
             		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>一般毒理室</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
+            			<h5>${l4.laboratoryName }</h5>
+            			<p>${l4.laboratoryInfo }</p>
             		</div>
             		</a>
             	</li>
-            	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
-            		<a href="gnsysInfo.htm?type=9">
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="/res/img/app2.png" />
-            		</div>
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>一般毒理室2</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
-            		</div>
-            		</a>
-            	</li>
+            	</c:forEach>
             </ul>
           </div>
           <div data-tab-panel-4 class="am-tab-panel ">
             <ul class="am-container-1 solutions-content-ul">
-            	<a href="gnsysInfo.htm?type=10">
+            	<c:forEach items="${l5 }" var="l5">
             	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
+            		<a href="gnsysInfo.html?laboratoryId=${l5.id }">
             		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="/res/img/app1.png" />
+            			<img src="${l5.laboratoryPic }" />
             		</div>
             		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>分析室</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
+            			<h5>${l5.laboratoryName }</h5>
+            			<p>${l5.laboratoryInfo }</p>
             		</div>
             		</a>
             	</li>
-            	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
-            		<a href="gnsysInfo.htm?type=11">
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="/res/img/app2.png" />
-            		</div>
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>分析室2</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
-            		</div>
-            		</a>
-            	</li>
+            	</c:forEach>
             </ul>
           </div>
           <div data-tab-panel-5 class="am-tab-panel ">
             <ul class="am-container-1 solutions-content-ul">
-            	<a href="gnsysInfo.htm?type=12">
+            	<c:forEach items="${l6 }" var="l6">
             	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
+            		<a href="gnsysInfo.html?laboratoryId=${l6.id }">
             		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="/res/img/app1.png" />
+            			<img src="${l6.laboratoryPic }" />
             		</div>
             		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>细胞生物室</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
+            			<h5>${l6.laboratoryName }</h5>
+            			<p>${l6.laboratoryInfo }</p>
             		</div>
             		</a>
             	</li>
-            	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
-            		<a href="gnsysInfo.htm?type=13">
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="/res/img/app2.png" />
-            		</div>
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>细胞生物室2</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
-            		</div>
-            		</a>
-            	</li>
+            	</c:forEach>
             </ul>
           </div>
           <div data-tab-panel-6 class="am-tab-panel ">
             <ul class="am-container-1 solutions-content-ul">
-            	<a href="gnsysInfo.htm?type=14">
+            	<c:forEach items="${l7 }" var="l7">
             	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
+            		<a href="gnsysInfo.html?laboratoryId=${l7.id }">
             		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="/res/img/app1.png" />
+            			<img src="${l7.laboratoryPic }" />
             		</div>
             		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>供试品室</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
+            			<h5>${l7.laboratoryName }</h5>
+            			<p>${l7.laboratoryInfo }</p>
             		</div>
             		</a>
             	</li>
-            	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
-            		<a href="gnsysInfo.htm?type=15">
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="/res/img/app2.png" />
-            		</div>
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>供试品室2</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
-            		</div>
-            		</a>
-            	</li>
+            	</c:forEach>
             </ul>
           </div>
           <div data-tab-panel-7 class="am-tab-panel ">
             <ul class="am-container-1 solutions-content-ul">
-            	<a href="gnsysInfo.htm?type=16">
+            	<c:forEach items="${l8 }" var="l8">
             	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
+            		<a href="gnsysInfo.html?laboratoryId=${l8.id }">
             		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="/res/img/app1.png" />
+            			<img src="${l8.laboratoryPic }" />
             		</div>
             		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>档案室</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
+            			<h5>${l8.laboratoryName }</h5>
+            			<p>${l8.laboratoryInfo }</p>
             		</div>
             		</a>
             	</li>
-            	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
-            		<a href="gnsysInfo.htm?type=17">
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="/res/img/app2.png" />
-            		</div>
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>档案室2</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
-            		</div>
-            		</a>
-            	</li>
+            	</c:forEach>
             </ul>
           </div>
           <div data-tab-panel-8 class="am-tab-panel ">
             <ul class="am-container-1 solutions-content-ul">
-            	<a href="gnsysInfo.htm?type=18">
+            	<c:forEach items="${l9 }" var="l9">
             	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
+            		<a href="gnsysInfo.html?laboratoryId=${l9.id }">
             		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="/res/img/app1.png" />
+            			<img src="${l9.laboratoryPic }" />
             		</div>
             		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>环境毒理室</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
+            			<h5>${l9.laboratoryName }</h5>
+            			<p>${l9.laboratoryInfo}</p>
             		</div>
             		</a>
             	</li>
-            	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
-            		<a href="gnsysInfo.htm?type=19">
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="/res/img/app2.png" />
-            		</div>
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>环境毒理室2</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
-            		</div>
-            		</a>
-            	</li>
+            	</c:forEach>
             </ul>
           </div>
           <div data-tab-panel-9 class="am-tab-panel ">
             <ul class="am-container-1 solutions-content-ul">
-            	<a href="gnsysInfo.htm?type=20">
+            	<c:forEach items="${l10 }" var="l10">
             	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
+            		<a href="gnsysInfo.html?laboratoryId=${l10.id }">
             		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="/res/img/app1.png" />
+            			<img src="${l10.laboratoryPic }" />
             		</div>
             		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>信息中心</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
+            			<h5>${l10.laboratoryName }</h5>
+            			<p>${l10.laboratoryInfo }</p>
             		</div>
             		</a>
             	</li>
-            	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
-            		<a href="gnsysInfo.htm?type=21">
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="/res/img/app2.png" />
-            		</div>
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>信息中心2</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
-            		</div>
-            		</a>
-            	</li>
+            	</c:forEach>
             </ul>
           </div>
           <div data-tab-panel-10 class="am-tab-panel ">
             <ul class="am-container-1 solutions-content-ul">
-            	<a href="gnsysInfo.htm?type=22">
+            	<c:forEach items="${l11 }" var="l11">
             	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
+            		<a href="gnsysInfo.html?laboratoryId=${l11.id }">
             		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="/res/img/app1.png" />
+            			<img src="${l11.laboratoryPic }" />
             		</div>
             		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>质量保证部</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
+            			<h5>${l11.laboratoryName }</h5>
+            			<p>${l11.laboratoryInfo}</p>
             		</div>
             		</a>
             	</li>
-            	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
-            		<a href="gnsysInfo.htm?type=23">
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="/res/img/app2.png" />
-            		</div>
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>质量保证部2</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
-            		</div>
-            		</a>
-            	</li>
+            	</c:forEach>
             </ul>
           </div>
       </div>
+   
   </div>
+		
 		
 </div>
 
@@ -417,7 +310,14 @@
    
 </footer>
 
-
+<DIV class="bot">
+<div class="bot1000">
+<span> 苏州西山中科系统股份有限公司  版权所有  任何单位及个人未经许可不可擅自使用</span>
+<br/>
+<span>© SAC 1999-2016  苏ICP备12008164号</span>&nbsp;<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1255665239'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1255665239%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+</DIV>
+</body>
 </body>
 <!--[if lt IE 9]>
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>

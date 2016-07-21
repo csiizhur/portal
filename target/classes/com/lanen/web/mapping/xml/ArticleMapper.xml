@@ -16,6 +16,8 @@
 		<result column="content" property="content" />
 		<result column="pic" property="pic" />
 		<result column="is_del" property="isDel" />
+		<result column="description" property="description" />
+		<result column="news_type" property="newsType" />
 
 	</resultMap>
 
@@ -30,6 +32,16 @@
 		</if> -->
 		and id=#{articleId}
 		<!-- ORDER BY USER_ID -->
+	</select>
+	<select id="queryArticleTop5" resultMap="articleMap">
+		select * from
+		weixin_hot_article where is_del!=1
+		ORDER BY create_time desc LIMIT 0,5 
+	</select>
+	<select id="queryNewsByType" resultMap="articleMap">
+		select * from
+		weixin_hot_article where is_del!=1
+		and news_type=#{newsType}
 	</select>
 
 </mapper>

@@ -1,27 +1,27 @@
 package com.lanen.web.controller;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.github.pagehelper.PageInfo;
-import com.lanen.web.pojo.Article;
-import com.lanen.web.service.impl.BaseServiceImpl;
+import com.lanen.web.pojo.Case;
+import com.lanen.web.pojo.ServiceCase;
+import com.lanen.web.pojo.ServiceItem;
+import com.lanen.web.service.impl.CaseServiceImpl;
 import com.lanen.web.service.impl.ServiceItemServiceImpl;
-import com.lanen.web.util.Constrants;
-import com.lanen.web.util.PageQueryUtil;
-import com.lanen.web.util.PageUtil;
 
 /**
  * 
- * @Description 
+ * @Description
  * @ClassName FwController.java
  * @author Administrator-zhur
  * @date 2016年7月4日下午3:41:08
@@ -31,34 +31,82 @@ import com.lanen.web.util.PageUtil;
 public class FwController {
 
 	@Autowired
-	private BaseServiceImpl baseService;
-	@Autowired
 	private ServiceItemServiceImpl serviceItemService;
-	@RequestMapping("/index")
-	public ModelAndView index(){
-		return new ModelAndView("service-center").addObject("list", serviceItemService.queryServiceItem());
-	}
+	@Autowired
+	private CaseServiceImpl caseService;
 	
+	@RequestMapping("/index")
+	public ModelAndView index() {
+		/*return new ModelAndView("service-center").addObject("list",
+				serviceItemService.queryServiceItem());*/
+		
+		return new ModelAndView("redirect:detail/hjdl.html");
+	}
+
 	/**
 	 * 
 	 * @return 农药
 	 * @author Administrator-zhur
 	 * @date 2016年7月4日 下午3:42:11
 	 */
-	@RequestMapping("/nongYao")
-	public ModelAndView nongYao(){
-		return new ModelAndView("services/");
+	@RequestMapping("/detail/*")
+	public ModelAndView serviceDetail(HttpServletRequest req) {
+		String requestUrl = req.getRequestURI();
+		/*String temUrl = requestUrl.substring(requestUrl.indexOf("/"),
+				requestUrl.lastIndexOf("/"));*/
+		String temUrl=requestUrl.substring(requestUrl.lastIndexOf("/"), requestUrl.indexOf("."));
+		ServiceItem si=new ServiceItem();
+		List<ServiceItem> list=new ArrayList<ServiceItem>();
+		List<Case> caseList=new ArrayList<Case>();
+		if (temUrl.equals("/hjdl")) {
+			list =serviceItemService.queryServiceItemByParentId(0);
+		} else if (temUrl.equals("/dlxjc-glp")) {
+			list = serviceItemService
+					.queryServiceItemByParentId(1);
+		} else if (temUrl.equals("/dddlx")) {
+			list =  serviceItemService
+					.queryServiceItemByParentId(2);
+		}else if(temUrl.equals("/dlxjc")){
+			list =serviceItemService
+					.queryServiceItemByParentId(3);
+		}else if(temUrl.equals("stdlx")){
+			list =serviceItemService
+					.queryServiceItemByParentId(4);
+		}else if(temUrl.equals("/ywaq")){
+			
+			list = serviceItemService
+					.queryServiceItemByParentId(5);
+		}else if(temUrl.equals("/yxxyj")){
+			list =  serviceItemService
+					.queryServiceItemByParentId(6);
+		}else {
+			list = serviceItemService
+					.queryServiceItemByParentId(7);
+		}
+
+		if(list.size()>0&&list!=null){
+			si=list.get(0);
+			caseList=getCaseName(si.getId());
+		}else{
+			si.setServiceAdvantage("抱歉没有该服务信息！");
+			si.setServicePic("抱歉没有该服务案例");
+			si.setServiceContent("抱歉没有该服务信息！");
+			si.setServiceCase("抱歉没有该服务案例");
+		}
+		return new ModelAndView("services/item-show").addObject("si", si).addObject("casess", caseList);
 	}
+
 	/**
 	 * 
 	 * @return 新化学物质
 	 * @author Administrator-zhur
 	 * @date 2016年7月4日 下午3:42:11
 	 */
-	@RequestMapping("/xinHuaXueWuZhi")
-	public ModelAndView xinHuaXueWuZhi(){
+	@RequestMapping("/xhxwz/")
+	public ModelAndView xinHuaXueWuZhi() {
 		return new ModelAndView("services/");
 	}
+
 	/**
 	 * 
 	 * @return 药品
@@ -66,67 +114,36 @@ public class FwController {
 	 * @date 2016年7月4日 下午3:42:11
 	 */
 	@RequestMapping("/yaoPin")
-	public ModelAndView yaoPin(){
+	public ModelAndView yaoPin() {
 		return new ModelAndView("services/yaopin-show");
 	}
+
 	/**
 	 * 根据上级查出下级
+	 * 
 	 * @param parentId
 	 * @return
 	 * @author Administrator-zhur
 	 * @date 2016年7月6日 下午3:42:37
 	 */
 	@RequestMapping("/service-item/show")
-	public ModelAndView listItems(@RequestParam int parentId){
-		
-		//怎样将list分3个
-		List<?> ll=serviceItemService.queryServiceItemByParentId(parentId);
-		
-		
+	public ModelAndView listItems(@RequestParam int parentId) {
+
+		// 怎样将list分3个
+		List<?> ll = serviceItemService.queryServiceItemByParentId(parentId);
+
 		return new ModelAndView("/services/item-show").addObject("list", ll);
 	}
-	/**
-	 * 通过currentPage进行分页
-	 * @param currentPage
-	 * @return
-	 * @author Administrator-zhur
-	 * @date 2016年7月5日 上午9:07:02
-	 */
-	@RequestMapping("/tt")
-	public ModelAndView testss(Integer currentPage){
-		
-		//默认每页10条记录
-		PageInfo<Article> article=baseService.queryByPage("", currentPage, null);
-		
-		return backView("news", article);
+
+	public List<Case> getCaseName(int serviceId){
+		List<Case> list=new ArrayList<Case>();
+		List<ServiceItem> l=(List<ServiceItem>) serviceItemService.queryServiceCaseById(serviceId);
+		for(ServiceItem si:l){
+			ServiceCase sc=si.getListServiceCase().get(0);
+			System.err.println(sc.getCaseId());
+			Case casess=serviceItemService.queryCaseNameById(sc.getCaseId());
+			list.add(casess);
+		}
+		return list;
 	}
-	
-	public ModelAndView backView(String view, PageInfo<Article> article) {
-		ModelAndView v = new ModelAndView(view);
-		Map<String,Object> map=new HashMap<String,Object>();
-		PageQueryUtil page=new PageQueryUtil();
-		
-	    page.setCurrentPage(article.getPageNum());//当前页
-	    page.setTotalSize((int)article.getTotal());//总记录数
-	    page.setPageSize(article.getPageSize());//每页记录数
-	    page.setTotalPage(article.getPages());//总页数
-	    
-	    List<Article> pageList= article.getList();
-	    //由于在page里面重写了toString方法，这里再构造一个List装list;
-	    List<Article> list=new ArrayList<Article>();
-	    list.addAll(pageList);
-		map.put(Constrants.LIST, list);
-		map.put(Constrants.COUNT, 2);
-		map.put(Constrants.PAGE, 3);
-		map.put(Constrants.PAGE_STRING, PageUtil.pageString(page));
-		
-		map.put("totalSize", article.getTotal());
-		map.put("totalPage", article.getPages());
-		map.put("currentPage", article.getPageNum());
-		v.addAllObjects(map);
-		
-		
-		return v;
-	}
-	
 }

@@ -5,10 +5,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.github.pagehelper.PageInfo;
-import com.lanen.web.util.Constrants;
+import com.lanen.web.admin.util.Constrants;
 import com.lanen.web.util.PageQueryUtil;
 import com.lanen.web.util.PageUtil;
 
@@ -37,5 +42,42 @@ public class BaseController {
 		v.addAllObjects(map);
 
 		return v;
+	}
+	
+	/**
+	 * 得到request对象
+	 */
+	protected HttpServletRequest getRequest() {
+		return ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();
+	}
+	/**
+	 * 得到session
+	 * @return
+	 * @author Administrator-zhur
+	 * @date 2016年7月12日 下午5:19:55
+	 */
+	protected HttpSession getSession(){
+		return getRequest().getSession();
+	}
+	
+	/**
+	 * 
+	 * @Function: successView
+	 * @Description: 返回信息提示视图
+	 * 
+	 * @param:参数描述
+	 * @return：返回结果描述
+	 * @throws：异常描述
+	 * 
+	 * @version: v1.0.0
+	 * @author: master
+	 * @date: 2015-5-15 下午2:54:29
+	 * 
+	 *        Modification History: Date Author Version Description
+	 *        ---------------------------------------------------------*
+	 */
+	public ModelAndView returnView(String message,String view) {
+		return new ModelAndView(view).addObject(Constrants.MESSAGE_TIP_FLAGS, true)
+				.addObject(Constrants.MESSAGE_TIP, message);
 	}
 }

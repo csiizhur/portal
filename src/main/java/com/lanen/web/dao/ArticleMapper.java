@@ -20,4 +20,21 @@ public interface ArticleMapper {
 	 */
 	Article queryById(Integer articleId);
 	
+	/**
+	 * 取出最新5条
+	 * @return
+	 * @author Administrator-zhur
+	 * @date 2016年7月7日 上午10:18:36
+	 */
+	List<Article> queryArticleTop5();
+	
+	/**
+	 * 根据类型查询
+	 * @param newsType
+	 * @return
+	 * @author Administrator-zhur
+	 * @date 2016年7月7日 下午6:13:28
+	 */
+	List<Article> queryNewsByType(int newsType);
+	
 }

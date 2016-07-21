@@ -24,6 +24,10 @@ public class Article {
 	private String pic;
 	
 	private int isDel;
+	
+	private String description;
+	
+	private int newsType;
 
 	public Integer getId() {
 		return id;
@@ -87,6 +91,22 @@ public class Article {
 
 	public void setIsDel(int isDel) {
 		this.isDel = isDel;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public int getNewsType() {
+		return newsType;
+	}
+
+	public void setNewsType(int newsType) {
+		this.newsType = newsType;
 	}
 
 	

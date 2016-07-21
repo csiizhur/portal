@@ -13,8 +13,23 @@
 		<result column="create_time" property="createTime" />
 		<result column="is_del" property="isDel" />
 		<result column="parent_id" property="parentId" />
+		<result column="service_advantage" property="serviceAdvantage" />
+		<result column="service_case" property="serviceCase" />
+		
+		<!-- 配置一对多 -->
+		<!-- property: 指的是集合属性的值, ofType：指的是集合中元素的类型 -->
+		<collection property="listServiceCase" ofType="com.lanen.web.pojo.ServiceCase">
+			<id column="id" property="id"/>
+			<result column="service_id" property="serviceId"/>
+			<result column="case_id" property="caseId"/>
+		</collection>
 	</resultMap>
-
+	
+	<resultMap type="com.lanen.web.pojo.Case" id="caseMap">
+		<id column="id" property="id"/>
+		<result column="case_name" property="caseName"/>
+	</resultMap>
+	
 	<select id="queryServiceItem" resultMap="serviceMap">
 		select * from
 		weixin_service_item where is_del!=1 and parent_id=0
@@ -23,5 +38,15 @@
 		select * from
 		weixin_service_item where is_del!=1 and parent_id=#{parentId}
 	</select>
-
+	<select id="queryServiceCaseById" resultMap="serviceMap">
+		select sc.*, si.* from service_case sc, weixin_service_item si where sc.service_id  = si.id and si.id = #{serviceId}
+	</select>
+	
+	<!-- <select id="queryCaseNameById" resultMap="java.lang.String">
+		select case_name from portal_service_case where id=#{caseId}
+	</select> -->
+	
+	<select id="queryCaseNameById" resultMap="caseMap">
+		select * from portal_service_case where id=#{caseId}
+	</select>
 </mapper>

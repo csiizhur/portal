@@ -11,6 +11,8 @@
 		<result column="laboratory_pic" property="laboratoryPic" />
 		<result column="laboratory_type" property="laboratoryType" />
 		<result column="is_del" property="isDel" />
+		<result column="create_time" property="createTime" />
+		<result column="update_time" property="updateTime" />
 
 	</resultMap>
 
@@ -18,5 +20,14 @@
 		select * from
 		portal_laboratory where is_del!=1 and laboratory_type=#{laboratoryType}
 	</select>
-
+	
+	<select id="queryLabTop8" resultMap="laboratoryMap">
+		select * from 
+		portal_laboratory where is_del!=1 limit 0,8
+	</select>
+	<select id="queryLabById" resultMap="laboratoryMap">
+		select * from 
+		portal_laboratory where is_del!=1 and id=#{id}
+	</select>
+	
 </mapper>

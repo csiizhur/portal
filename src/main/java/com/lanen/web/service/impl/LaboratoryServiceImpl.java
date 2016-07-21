@@ -15,6 +15,8 @@
 */
 package com.lanen.web.service.impl;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
@@ -35,9 +37,19 @@ public class LaboratoryServiceImpl implements LaboratoryService {
 	private LaboratoryMapperDao laboratoryDao;
 	
 	@Override
-	public Laboratory queryLabByType(int laboratoryType) {
+	public List<Laboratory> queryLabByType(int laboratoryType) {
 		
 		return laboratoryDao.queryLabByType(laboratoryType);
+	}
+
+	@Override
+	public List<Laboratory> queryLabTop8() {
+		return laboratoryDao.queryLabTop8();
+	}
+
+	@Override
+	public Laboratory queryLabById(int id) {
+		return laboratoryDao.queryLabById(id);
 	} 
 	
 }

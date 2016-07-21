@@ -1,5 +1,7 @@
 package com.lanen.web.pojo;
 
+import java.util.Date;
+
 /**
  * 
  * @Description 功能实验室表
@@ -15,6 +17,8 @@ public class Laboratory {
 	private String laboratoryPic;
 	private int laboratoryType;
 	private int isDel;
+	private Date createTime;
+	private Date updateTime;
 	public int getId() {
 		return id;
 	}
@@ -50,6 +54,19 @@ public class Laboratory {
 	}
 	public void setIsDel(int isDel) {
 		this.isDel = isDel;
+	}
+	
+	public Date getCreateTime() {
+		return createTime;
+	}
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+	public Date getUpdateTime() {
+		return updateTime;
+	}
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
 	}
 	
 	

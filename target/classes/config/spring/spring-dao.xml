@@ -14,6 +14,7 @@
 		<property name="url" value="${db.url}" />
 		<property name="username" value="${db.username}" />
 		<property name="password" value="${db.password}" />
+		<property name="filters" value="stat" />
 	</bean>
 	
 	<!-- mybatis扫描mapper文件 -->
@@ -24,13 +25,17 @@
 		<!-- 扫描entity包 使用别名 -->
 		<property name="typeAliasesPackage" value="com.lanen.web.pojo"></property>
 		<!-- 自动扫描entity目录, 省掉Configuration.xml里的手工配置 -->
-		<property name="mapperLocations" value="classpath:com/lanen/web/mapping/xml/*.xml" />
+		<!-- <property name="mapperLocations" value="classpath:com/lanen/web/mapping/xml/*.xml" /> -->
+		<!-- 配置多个扫描包路径 -->
+		<!-- 在classpath后面的*必不可少，缺少型号的话后面的通配符不起作用。 **表示可以表示任意多级目录    *表示多个任意字符 -->
+		<property name="mapperLocations" value="classpath*:com/lanen/web/**/*Mapper.xml"></property>
 	</bean>
 	
 	<!-- mybatis配置扫描DAO接口包，动态实现dao接口，注入到spring容器中 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<!-- 给出需要扫描的dao接口包 -->
-		<property name="basePackage" value="com.lanen.web.dao" />
+		<!-- 给出需要扫描的dao接口包  basePackage可以写多个，可以用,;\t\n进行分割。-->
+		<!-- <property name="basePackage" value="com.lanen.web.dao" /> -->
+		<property name="basePackage" value="com.lanen.web.dao,com.lanen.web.admin.dao" />
 		<!-- 注入sqlSessionFactory -->
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
 	</bean>

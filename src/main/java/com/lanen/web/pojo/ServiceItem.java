@@ -1,6 +1,7 @@
 package com.lanen.web.pojo;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 /**
  * 
@@ -18,8 +19,11 @@ public class ServiceItem {
 	private int createUser;
 	private Timestamp createTime;
 	private int isDel;
-	
+	private String serviceAdvantage;
+	private String serviceCase;
 	private int parentId;
+	
+	private List<ServiceCase> listServiceCase;
 	public int getId() {
 		return id;
 	}
@@ -67,6 +71,24 @@ public class ServiceItem {
 	}
 	public void setParentId(int parentId) {
 		this.parentId = parentId;
+	}
+	public String getServiceAdvantage() {
+		return serviceAdvantage;
+	}
+	public void setServiceAdvantage(String serviceAdvantage) {
+		this.serviceAdvantage = serviceAdvantage;
+	}
+	public String getServiceCase() {
+		return serviceCase;
+	}
+	public void setServiceCase(String serviceCase) {
+		this.serviceCase = serviceCase;
+	}
+	public List<ServiceCase> getListServiceCase() {
+		return listServiceCase;
+	}
+	public void setListServiceCase(List<ServiceCase> listServiceCase) {
+		this.listServiceCase = listServiceCase;
 	}
 	
 	
