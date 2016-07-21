@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- For assistance related to logback-translator or configuration  -->
+<!-- files in general, please contact the logback user mailing list -->
+<!-- at http://www.qos.ch/mailman/listinfo/logback-user             -->
+<!--                                                                -->
+<!-- For professional support please see                            -->
+<!--    http://www.qos.ch/shop/products/professionalSupport         -->
+<!--                                                                -->
+<configuration>
+  <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+    <Target>System.out</Target>
+    <encoder>
+      <pattern>[%p][%d{yyyy-MM-dd HH:mm:ss,SSS}][%c]%m%n</pattern>
+    </encoder>
+    <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+      <level>DEBUG</level>
+    </filter>
+  </appender>
+  <appender name="File" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <!-- Tests run on modern PCs show that buffering related property -->
+    <!-- "ImmediateFlush" has negligible impact and will be ignored.  -->
+    <!--See http://logback.qos.ch/manual/appenders.html#RollingFileAppender-->
+    <!--and http://logback.qos.ch/manual/appenders.html#TimeBasedRollingPolicy-->
+    <!--for further documentation-->
+    <File>${catalina.base}/portal-logs/portal.log</File>
+    <Append>true</Append>
+    <encoder>
+      <pattern>[%p][%d{yyyy-MM-dd HH:mm:ss,SSS}][%c]%m%n</pattern>
+    </encoder>
+    <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+      <level>INFO</level>
+    </filter>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>${catalina.base}/portal-logs/portal.log.%d{yyyy-MM-dd'.log'}</fileNamePattern>
+    </rollingPolicy>
+  </appender>
+  <root level="INFO">
+    <appender-ref ref="Console"/>
+    <appender-ref ref="File"/>
+  </root>
+</configuration>

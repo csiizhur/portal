@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lanen.web.dao.HistoryMapperDao">
+	<resultMap type="com.lanen.web.pojo.History" id="HistoryMap">
+		<id column="id" property="id" />
+		<result column="history_name" property="historyName" />
+		<result column="history_time" property="historyYear" />
+		<result column="history_info" property="historyInfo" />
+		<result column="history_info1" property="historyInfo1" />
+		<result column="history_info2" property="historyInfo2" />
+		<result column="history_info3" property="historyInfo3" />
+		<result column="history_pic" property="historyPic" />
+		<result column="is_del" property="isDel" />
+	</resultMap>
+
+	<select id="queryHistory" resultMap="HistoryMap">
+		select * from
+		portal_us_history where is_del!=1
+	</select>
+
+
+</mapper>

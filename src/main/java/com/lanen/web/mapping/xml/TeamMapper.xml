@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lanen.web.dao.TeamMapperDao">
+	<resultMap type="com.lanen.web.pojo.Team" id="TeamMap">
+		<id column="id" property="id" />
+		<result column="team_name" property="teamName" />
+		<result column="team_info" property="teamInfo" />
+		<result column="team_pic" property="teamPic" />
+		<result column="is_del" property="isDel" />
+		<result column="team_description" property="teamDescription" />
+	</resultMap>
+
+	<select id="queryTeam" resultMap="TeamMap">
+		select * from
+		weixin_team where is_del!=1
+	</select>
+	<select id="queryTeamById" resultMap="TeamMap">
+		select * from
+		weixin_team where is_del!=1 and id=#{teamId}
+	</select>
+	
+
+</mapper>

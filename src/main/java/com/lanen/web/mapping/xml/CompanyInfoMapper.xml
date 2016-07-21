@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lanen.web.dao.CompanyInfoMapperDao">
+	<resultMap type="com.lanen.web.pojo.CompanyInfo" id="CompanyInfoMap">
+		<id column="id" property="id" />
+		<result column="company_name" property="companyName" />
+		<result column="company_info" property="companyInfo" />
+		<result column="company_pic" property="companyPic" />
+		<result column="create_user" property="createUser" />
+		<result column="create_time" property="createTime" />
+		<result column="is_del" property="isDel" />
+	</resultMap>
+
+	<select id="queryCompanyInfo" resultMap="CompanyInfoMap">
+		select * from
+		weixin_company where is_del!=1
+	</select>
+
+</mapper>
