@@ -58,17 +58,17 @@
 				<p>News Information</p>
 			</div>
 			<div class="right toppic-progress">
-				<span><a href="news.html" class="w-white">新闻动态</a></span> <i
+				<span><a href="${pageContext.request.contextPath }/xwhd/index.html" class="w-white">新闻动态</a></span> <i
 					class=" am-icon-arrow-circle-right w-white"></i> <span><a
-					href="news-inform.html" class="w-white">学术新闻</a></span>
+					href="${pageContext.request.contextPath }/xwhd/news-xs-inform.html" class="w-white">学术新闻</a></span>
 			</div>
 		</div>
 	</div>
 	<div class="content">
 		<div class="submenu">
 			<ul>
-				<li><a href="/xwhd/news-gs-inform.html" target="_parent">公司新闻</a></li>
-				<li><a href="/xwhd/news-xs-inform.html" target="_parent">学术新闻</a></li>
+				<li><a href="${pageContext.request.contextPath }/xwhd/news-gs-inform.html" target="_parent">公司新闻</a></li>
+				<li><a href="${pageContext.request.contextPath }/xwhd/news-xs-inform.html" target="_parent">学术新闻</a></li>
 			</ul>
 		</div>
 		<div class="mainbox">
@@ -76,7 +76,7 @@
 				<ul class="news_list financeinfor_list">
 					<c:forEach items="${list }" var="p">
 					<li><span><f:formatDate value="${p.createTime }" pattern="[yyyy-MM-dd]"></f:formatDate></span>·<a
-						href="/xwhd/news-inform.html?articleId=${p.id }&newsType=${p.newsType}" target="_parent" class="pt8">${p.description }</a></li>
+						href="${pageContext.request.contextPath }/xwhd/news-inform.html?articleId=${p.id }&newsType=${p.newsType}" target="_parent" class="pt8">${p.description }</a></li>
 					</c:forEach>
 				</ul>
 

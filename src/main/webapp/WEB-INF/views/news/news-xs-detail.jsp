@@ -54,14 +54,14 @@
 	<div class="toppic">
 		<div class="am-container-1">
 			<div class="toppic-title left">
-				<i class="am-icon-hand-paper-o toppic-title-i"></i> <span
+				<i class="am-icon-newspaper-o toppic-title-i"></i> <span
 					class="toppic-title-span">学术新闻</span>
 				<p>News Center</p>
 			</div>
 			<div class="right toppic-progress">
 				<span><a href="${pageContext.request.contextPath}/index.html" class="w-white">首页</a></span> <i
 					class=" am-icon-arrow-circle-right w-white"></i> <span><a
-					href="${pageContext.request.contextPath}/fw/index.html" class="w-white">服务中心</a></span>
+					href="${pageContext.request.contextPath}/xwhd/index.html" class="w-white">新闻活动</a></span>
 			</div>
 		</div>
 	</div>
@@ -70,8 +70,8 @@
 
 		<div class="submenu">
 			<ul>
-				<li><a href="/xwhd/news-gs-inform.html" target="_parent">公司新闻</a></li>
-				<li><a href="/xwhd/news-xs-inform.html" target="_parent">学术新闻</a></li>
+				<li><a href="${pageContext.request.contextPath }/xwhd/news-gs-inform.html" target="_parent">公司新闻</a></li>
+				<li><a href="${pageContext.request.contextPath }/xwhd/news-xs-inform.html" target="_parent">学术新闻</a></li>
 			</ul>
 		</div>
 		<div class="mainbox news_article">
@@ -79,7 +79,7 @@
 
 				<h3 style="text-align: left; text-indent: 24px;">
 					<a target="_parent" href="${pageContext.request.contextPath}/index.html">首页</a> ><a target="_parent"
-						href="${pageContext.request.contextPath}/index.html"></a> <a target="_parent" href="/xwhd/index.html">新闻动态</a>
+						href="${pageContext.request.contextPath}/index.html"></a> <a target="_parent" href="${pageContext.request.contextPath }/xwhd/index.html">新闻动态</a>
 					><a target="_parent" href="${pageContext.request.contextPath}/xwhd/news-xs-inform.html"></a> <a
 						target="_parent" href="${pageContext.request.contextPath}/xwhd/news-xs-inform.html">学术新闻</a> <label><a
 						href="javascript:history.back()">返回</a></label> > ${article.title }
@@ -102,9 +102,9 @@
 			<div class="down_le bord_ri">
 				<h4>联系我们</h4>
 				<p class="siz12 col_6" style="margin: 30px 0;">
-					<img src="/res/img/tell.png"
+					<img src="${pageContext.request.contextPath }/res/img/tell.png"
 						height="18" width="18">&nbsp;总公司市场部：0512-65982476 <br>
-					<img src="/res/img/email.png"
+					<img src="${pageContext.request.contextPath }/res/img/email.png"
 						height="18" width="18">&nbsp;邮箱地址：marketing@szxszk.com
 				</p>
 			</div>

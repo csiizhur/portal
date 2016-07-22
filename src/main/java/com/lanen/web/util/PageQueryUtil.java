@@ -1,5 +1,13 @@
 package com.lanen.web.util;
 
+/**
+ * 
+ * @Description 分页工具类
+ * @ClassName PageQueryUtil.java
+ * @author Administrator-zhur
+ * @date 2016年7月22日下午12:59:38
+ */
+@SuppressWarnings("serial")
 public class PageQueryUtil implements java.io.Serializable, IPage {
 	private int pageSize = 10; // 每页显示条数
 	private int currentPage = 1;// 当前页

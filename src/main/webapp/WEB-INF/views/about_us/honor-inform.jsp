@@ -88,7 +88,7 @@
 				<c:forEach items="${list }" var="list">
 					<table>
 						<tr>
-							<td><img src="/image/photo.html?imgName=${list.pic }" width="80%" height="80%"></td>
+							<td><img src="${pageContext.request.contextPath }/image/photo.html?imgName=${list.pic }" width="80%" height="80%"></td>
 							<td></td>
 						</tr>
 						<tr>

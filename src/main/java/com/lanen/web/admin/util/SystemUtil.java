@@ -20,11 +20,10 @@ import sun.misc.BASE64Encoder;
 
 /**
  * 
- * @author lianxin
- * @description 系统工具类
- * @version 1.0
- * @date 2013-11-13
- * 
+ * @Description 系统工具类
+ * @ClassName SystemUtil.java
+ * @author Administrator-zhur
+ * @date 2016年7月22日下午12:55:58
  */
 public class SystemUtil {
 	/**

@@ -1,18 +1,3 @@
-/**   
-* Copyright: Copyright (c) 2015 xlz
-* 
-* @ClassName: BaseServiceImpl.java
-* @Description: 基础业务处理类
-*
-* @version: v1.0.0
-* @author: xuyiping
-* @date: 2015-4-21 上午9:37:24 
-*
-* Modification History:
-* Date         Author          Version            Description
-*---------------------------------------------------------*
-* 2014-1-13     xuyiping           v1.0.0               修改原因
-*/
 package com.lanen.web.service.impl;
 
 import java.util.List;
@@ -29,8 +14,10 @@ import com.lanen.web.service.NewsService;
 
 /**
  * 
- * @author yiping.xu 基础业务层
- * @param <T>
+ * @Description 新闻
+ * @ClassName NewsServiceImpl.java
+ * @author Administrator-zhur
+ * @date 2016年7月22日下午1:01:43
  */
 @Service
 public class NewsServiceImpl implements NewsService {

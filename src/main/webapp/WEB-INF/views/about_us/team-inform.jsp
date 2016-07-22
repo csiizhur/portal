@@ -81,15 +81,15 @@
 			<dl class="jrkl_lifeshow">
 				<dt>
 					<img
-						src="/image/photo.html?imgName=${team.teamPic }"
+						src="${pageContext.request.contextPath }/image/photo.html?imgName=${team.teamPic }"
 						height="84" width="133">
 				</dt>
 				<dd>
 					<h3>
-						<a href="/gyxs/team/detail/${team.id}.html">${team.teamName } </a>
+						<a href="${pageContext.request.contextPath }/gyxs/team/detail/${team.id}.html">${team.teamName } </a>
 					</h3>
 					<p>
-						<a href="/gyxs/team/detail/${team.id}.html">${team.teamDescription }</a>
+						<a href="${pageContext.request.contextPath }/gyxs/team/detail/${team.id}.html">${team.teamDescription }</a>
 					</p>
 					<p>
 						<label> </label>
@@ -110,9 +110,9 @@
 			<div class="down_le bord_ri">
 				<h4>联系我们</h4>
 				<p class="siz12 col_6" style="margin: 30px 0;">
-					<img src="/res/img/tell.png"
+					<img src="${pageContext.request.contextPath }/res/img/tell.png"
 						height="18" width="18">&nbsp;总公司市场部：0512-65982476 <br>
-					<img src="/res/img/email.png"
+					<img src="${pageContext.request.contextPath }/res/img/email.png"
 						height="18" width="18">&nbsp;邮箱地址：marketing@szxszk.com
 				</p>
 			</div>

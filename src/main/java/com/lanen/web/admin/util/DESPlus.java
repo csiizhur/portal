@@ -9,11 +9,11 @@ import javax.crypto.spec.SecretKeySpec;
 import com.sun.crypto.provider.SunJCE;
 
 /**
- * 加密解密工具类-DES默认公钥加密和自定义公钥加密
  * 
- * @author 许意平
- * @version 1.0
- * 
+ * @Description 加密解密工具类-DES默认公钥加密和自定义公钥加密
+ * @ClassName DESPlus.java
+ * @author Administrator-zhur
+ * @date 2016年7月22日下午12:56:17
  */
 public class DESPlus {
 	private static String strDefaultKey = "drt435@789!-DES234";

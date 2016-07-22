@@ -10,10 +10,11 @@ import java.util.Map;
 import java.util.Random;
 
 /**
- * 验证码生成工具
  * 
- * @author 许意平
- * 
+ * @Description 验证码
+ * @ClassName ImageCode.java
+ * @author Administrator-zhur
+ * @date 2016年7月22日下午12:55:16
  */
 public class ImageCode {
 	private static Random random = new Random();

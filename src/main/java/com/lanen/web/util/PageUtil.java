@@ -3,9 +3,11 @@ package com.lanen.web.util;
 public class PageUtil {
 
 	/**
-	 * @Description: 获取分页字符串
-	 * @author: yang.ma
-	 * @date: 2015-5-15 下午3:47:14
+	 *  获取分页字符串
+	 * @param page
+	 * @return
+	 * @author Administrator-zhur
+	 * @date 2016年7月22日 下午12:59:06
 	 */
 	public static String pageString(PageQueryUtil page) {
 		StringBuffer buffer = new StringBuffer();

@@ -66,12 +66,12 @@
 		<div class="submenu">
 			<ul>
 				<!--关于西山 start  -->
-				<li class="list-link"><a href="/gyxs/company-inform.html">公司介绍</a></li>
-				<li class="list-link"><a href="/gyxs/organize-inform.html">组织机构</a></li>
-				<li class="list-link"><a href="/gyxs/team-inform.html">技术团队</a></li>
-				<li class="list-link"><a href="/gyxs/ent-culture-inform.html">企业文化</a></li>
-				<li class="list-link"><a href="/gyxs/honor-inform.html">资质荣誉</a></li>
-				<li class="list-link"><a href="/gyxs/history-inform.html">历史沿革</a></li>
+				<li class="list-link"><a href="${pageContext.request.contextPath }/gyxs/company-inform.html">公司介绍</a></li>
+				<li class="list-link"><a href="${pageContext.request.contextPath }/gyxs/organize-inform.html">组织机构</a></li>
+				<li class="list-link"><a href="${pageContext.request.contextPath }/gyxs/team-inform.html">技术团队</a></li>
+				<li class="list-link"><a href="${pageContext.request.contextPath }/gyxs/ent-culture-inform.html">企业文化</a></li>
+				<li class="list-link"><a href="${pageContext.request.contextPath }/gyxs/honor-inform.html">资质荣誉</a></li>
+				<li class="list-link"><a href="${pageContext.request.contextPath }/gyxs/history-inform.html">历史沿革</a></li>
 				<!--关于西山 end  -->
 			</ul>
 		</div>

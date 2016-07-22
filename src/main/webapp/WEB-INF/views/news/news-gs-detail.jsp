@@ -55,13 +55,13 @@
 		<div class="am-container-1">
 			<div class="toppic-title left">
 				<i class="am-icon-hand-paper-o toppic-title-i"></i> <span
-					class="toppic-title-span">服务中心</span>
-				<p>Service Center</p>
+					class="toppic-title-span">公司新闻</span>
+				<p>Company News</p>
 			</div>
 			<div class="right toppic-progress">
 				<span><a href="${pageContext.request.contextPath}/index.html" class="w-white">首页</a></span> <i
 					class=" am-icon-arrow-circle-right w-white"></i> <span><a
-					href="${pageContext.request.contextPath}/fw/index.html" class="w-white">服务中心</a></span>
+					href="${pageContext.request.contextPath}/xwhd/index.html" class="w-white">新闻活动</a></span>
 			</div>
 		</div>
 	</div>
@@ -72,8 +72,8 @@
 			<ul>
 				<!--关于新闻动态 start  -->
 
-				<li><a href="/xwhd/news-gs-inform.html" target="_parent">公司新闻</a></li>
-				<li><a href="/xwhd/news-xs-inform.html" target="_parent">学术新闻</a></li>
+				<li><a href="${pageContext.request.contextPath }/xwhd/news-gs-inform.html" target="_parent">公司新闻</a></li>
+				<li><a href="${pageContext.request.contextPath }/xwhd/news-xs-inform.html" target="_parent">学术新闻</a></li>
 				<!--关于新闻动态 end  -->
 			</ul>
 		</div>
@@ -82,7 +82,7 @@
 
 				<h3 style="text-align: left; text-indent: 24px;">
 					<a target="_parent" href="${pageContext.request.contextPath}/index.html">首页</a> ><a target="_parent"
-						href="${pageContext.request.contextPath}/index.html"></a> <a target="_parent" href="/xwhd/index.html">新闻动态</a>
+						href="${pageContext.request.contextPath}/index.html"></a> <a target="_parent" href="${pageContext.request.contextPath }/xwhd/index.html">新闻动态</a>
 					><a target="_parent" href="${pageContext.request.contextPath}/xwhd/news-gs-inform.html"></a> <a
 						target="_parent" href="${pageContext.request.contextPath}/xwhd/news-gs-inform.html">公司新闻</a> <label><a
 						href="javascript:history.back()">返回</a></label> > ${article.title }

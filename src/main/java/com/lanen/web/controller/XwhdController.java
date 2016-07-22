@@ -27,8 +27,8 @@ public class XwhdController extends BaseController{
 	private NewsServiceImpl newsService;
 	@RequestMapping("/index")
 	public ModelAndView index(Integer currentPage){
-		//默认每页12条记录
-		PageInfo<Article> article=newsService.queryByPage(currentPage, null);
+		//TODO 每页12记录数
+		PageInfo<Article> article=newsService.queryByPage(currentPage, 12);
 				
 		return backView("news", article);
 	}

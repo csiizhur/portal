@@ -61,7 +61,7 @@
 			<div class="right toppic-progress">
 				<span><a href="${pageContext.request.contextPath}/index.html" class="w-white">首页</a></span> <i
 					class=" am-icon-arrow-circle-right w-white"></i> <span><a
-					href="${pageContext.request.contextPath}/fw/index.html" class="w-white">服务中心</a></span>
+					href="${pageContext.request.contextPath}/xwhd/index.html" class="w-white">新闻动态</a></span>
 			</div>
 		</div>
 	</div>
@@ -70,8 +70,8 @@
 
 		<div class="submenu">
 			<ul>
-				<li><a href="/xwhd/news-gs-inform.html" target="_parent">公司新闻</a></li>
-				<li><a href="/xwhd/news-xs-inform.html" target="_parent">学术新闻</a></li>
+				<li><a href="${pageContext.request.contextPath }/xwhd/news-gs-inform.html" target="_parent">公司新闻</a></li>
+				<li><a href="${pageContext.request.contextPath }/xwhd/news-xs-inform.html" target="_parent">学术新闻</a></li>
 			</ul>
 		</div>
 		<div class="mainbox ">
@@ -81,12 +81,12 @@
 					<c:forEach items="${list }" var="p">
 						<li>
 							<h3>
-								<a href="/xwhd/news-inform.html?articleId=${p.id }&newsType=${p.newsType}"
+								<a href="${pageContext.request.contextPath }/xwhd/news-inform.html?articleId=${p.id }&newsType=${p.newsType}"
 									target="_parent" class="pt8">${p.title }
 								</a>
 							</h3>
 							<p>
-								<a href="/xwhd/news-inform.html?articleId=${p.id }&newsType=${p.newsType}"
+								<a href="${pageContext.request.contextPath }/xwhd/news-inform.html?articleId=${p.id }&newsType=${p.newsType}"
 									target="_parent" class="pt8">${p.description }</a>
 							</p>
 							<p>

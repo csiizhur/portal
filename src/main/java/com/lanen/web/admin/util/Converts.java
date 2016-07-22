@@ -7,11 +7,11 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 /**
- * 数据转换类
  * 
- * @author 许意平
- * @version 1.0
- * 
+ * @Description 数据转换类
+ * @ClassName Converts.java
+ * @author Administrator-zhur
+ * @date 2016年7月22日下午12:56:35
  */
 public class Converts {
 	/**

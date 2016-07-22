@@ -99,7 +99,7 @@
 					<p>${list.organizeInfo }</p>
 					<p>&nbsp;</p>
 					<P>
-						<img src="/image/photo.html?imgName=${list.organizePic }" width="80%" height="80%" />
+						<img src="${pageContext.request.contextPath }/image/photo.html?imgName=${list.organizePic }" width="80%" height="80%" />
 					</P>
 					<P>&nbsp;</P>
 					<%-- <ul>
