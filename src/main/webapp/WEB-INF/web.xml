@@ -87,19 +87,13 @@
 		<servlet-name>druidStatView</servlet-name>
 		<url-pattern>/druid/*</url-pattern>
 	</servlet-mapping>
-	
+
 	<session-config>
 		<session-timeout>300</session-timeout>
 	</session-config>
 
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
-		<!-- <welcome-file>/WEB-INF/views/index.jsp</welcome-file> -->
 	</welcome-file-list>
 
-	<!-- <jsp-config> <taglib> <taglib-uri>/prev-tag</taglib-uri> <taglib-location>prev.tld</taglib-location> 
-		</taglib> </jsp-config> -->
-	<!-- 自定义一个servlet -->
-	<!-- <servlet> <servlet-name>url-interface</servlet-name> <servlet-class>com.lanen.web.start.InterfaceUrlIntiServlet</servlet-class> 
-		<load-on-startup>1</load-on-startup> </servlet> -->
 </web-app>

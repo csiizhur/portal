@@ -2,6 +2,8 @@ package com.lanen.web.dao;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
+
 import com.lanen.web.pojo.Article;
 
 public interface ArticleMapper {
@@ -37,4 +39,5 @@ public interface ArticleMapper {
 	 */
 	List<Article> queryNewsByType(int newsType);
 	
+	List<Article> queryByKeyWord(@Param("title") String title);
 }

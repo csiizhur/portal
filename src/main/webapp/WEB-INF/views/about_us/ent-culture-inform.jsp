@@ -14,15 +14,15 @@
 <meta name="renderer" content="webkit">
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-<link rel="alternate icon" href="${pageContext.request.contextPath}/res/img/xishanlogo.png">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/amazeui.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/style.css" />
+<link rel="alternate icon" href="/res/img/xishanlogo.png">
+<link rel="stylesheet" href="/res/css/amazeui.min.css" />
+<link rel="stylesheet" href="/res/css/style.css" />
 </head>
 <body class="commonbg_main">
 	<header class="am-topbar header">
 		<div class="am-container-1">
 			<div class="left hw-logo">
-				<img class=" logo" src="${pageContext.request.contextPath}/res/img/xishanlogo.png"></img>
+				<img class=" logo" src="/res/img/xishanlogo.png"></img>
 			</div>
 			<button
 				class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
@@ -37,12 +37,12 @@
 				<div class=" am-topbar-left am-form-inline am-topbar-right"
 					role="search">
 					<ul class="am-nav am-nav-pills am-topbar-nav hw-menu">
-						<li><a href="${pageContext.request.contextPath}/index.html">首页</a></li>
-						<li class="hw-menu-active"><a href="${pageContext.request.contextPath}/gyxs/index.html">关于我们</a></li>
-						<li><a href="${pageContext.request.contextPath}/gnsys/index.html">功能实验室</a></li>
-						<li><a href="${pageContext.request.contextPath}/xwhd/index.html">新闻动态 </a></li>
-						<li><a href="${pageContext.request.contextPath}/fw/index.html">服务中心 </a></li>
-						<li><a href="${pageContext.request.contextPath}/lxwm/index.html">联系我们</a></li>
+						<li><a href="/index.html">首页</a></li>
+						<li class="hw-menu-active"><a href="/gyxs/index.html">关于我们</a></li>
+						<li><a href="/gnsys/index.html">功能实验室</a></li>
+						<li><a href="/xwhd/index.html">新闻动态 </a></li>
+						<li><a href="/fw/index.html">服务中心 </a></li>
+						<li><a href="/lxwm/index.html">联系我们</a></li>
 					</ul>
 				</div>
 
@@ -57,9 +57,9 @@
 				<p>Culture Center</p>
 			</div>
 			<div class="right toppic-progress">
-				<span><a href="${pageContext.request.contextPath}/gyxs/index.html" class="w-white">关于西山</a></span> <i
+				<span><a href="/gyxs/index.html" class="w-white">关于西山</a></span> <i
 					class=" am-icon-arrow-circle-right w-white"></i> <span><a
-					href="${pageContext.request.contextPath}/index.html" class="w-white">首页</a></span>
+					href="/index.html" class="w-white">首页</a></span>
 			</div>
 		</div>
 	</div>
@@ -79,10 +79,10 @@
 		<div class="mainbox" style="margin-top:20px;">
 		<c:forEach items="${list }" var="list">
 		<dl class="jrkl_lifeshow">
-			<dt><img src="${pageContext.request.contextPath}/image/photo.html?imgName=${list.culturePic }" height="84" width="133"></dt>
+			<dt><img src="/image/photo.html?imgName=${list.culturePic }" height="84" width="133"></dt>
 			<dd>
-				<h3><a href="${pageContext.request.contextPath}/gyxs/culture/detail/${list.id}.html">${list.cultureName } </a></h3>
-				<p><a href="${pageContext.request.contextPath}/gyxs/culture/detail/${list.id }.html">${list.cultureDescription }</a></p>
+				<h3><a href="/gyxs/culture/detail/${list.id}.html">${list.cultureName } </a></h3>
+				<p><a href="/gyxs/culture/detail/${list.id }.html">${list.cultureDescription }</a></p>
 			 <p><label>
 			<f:formatDate value="${list.cultureDate }" pattern="[yyyy-MM-dd]"></f:formatDate>			 
 			</label></p>
@@ -123,7 +123,7 @@
 			</div>
 			<div class="bown_ri">
 				<a href="#"><img
-					src="${pageContext.request.contextPath}/res/img/weixin.jpg"></a>
+					src="/res/img/weixin.jpg"></a>
 			</div>
 			<div class="clear"></div>
 		</div>
@@ -135,13 +135,5 @@
 		</div>
 	</DIV>
 </body>
-<!--[if lt IE 9]>
-<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
-<![endif]-->
-<script src="${pageContext.request.contextPath}/res/js/jquery.min.js"></script>
-<script src="${pageContext.request.contextPath}/res/js/amazeui.min.js"></script>
-<!--[if (gte IE 9)|!(IE)]><!-->
 
 </html>

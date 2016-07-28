@@ -14,7 +14,7 @@
 
 	<select id="queryHonor" resultMap="HonorMap">
 		select * from
-		weixin_honor where is_del!=1
+		portal_honor where is_del!=1
 	</select>
 
 

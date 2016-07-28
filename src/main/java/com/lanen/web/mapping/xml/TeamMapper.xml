@@ -15,11 +15,11 @@
 
 	<select id="queryTeam" resultMap="TeamMap">
 		select * from
-		weixin_team where is_del!=1
+		portal_team where is_del!=1
 	</select>
 	<select id="queryTeamById" resultMap="TeamMap">
 		select * from
-		weixin_team where is_del!=1 and id=#{teamId}
+		portal_team where is_del!=1 and id=#{teamId}
 	</select>
 	
 

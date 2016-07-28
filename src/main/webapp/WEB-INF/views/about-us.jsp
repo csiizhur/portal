@@ -13,15 +13,15 @@
 <meta name="renderer" content="webkit">
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-<link rel="alternate icon" href="${pageContext.request.contextPath}/res/img/xishanlogo.png">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/amazeui.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/style.css" />
+<link rel="alternate icon" href="/res/img/xishanlogo.png">
+<link rel="stylesheet" href="/res/css/amazeui.min.css" />
+<link rel="stylesheet" href="/res/css/style.css" />
 </head>
 <body class="commonbg_main">
 	<header class="am-topbar header">
 		<div class="am-container-1">
 			<div class="left hw-logo">
-				<img class=" logo" src="${pageContext.request.contextPath}/res/img/xishanlogo.png"></img>
+				<img class=" logo" src="/res/img/xishanlogo.png"></img>
 			</div>
 			<button
 				class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
@@ -36,13 +36,13 @@
 				<div class=" am-topbar-left am-form-inline am-topbar-right"
 					role="search">
 					<ul class="am-nav am-nav-pills am-topbar-nav hw-menu">
-						<li><a href="${pageContext.request.contextPath}/index.html">首页</a></li>
-						<li class="hw-menu-active"><a href="${pageContext.request.contextPath}/gyxs/index.html">关于我们
+						<li><a href="/index.html">首页</a></li>
+						<li class="hw-menu-active"><a href="/gyxs/index.html">关于我们
 						</a></li>
-						<li><a href="${pageContext.request.contextPath}/gnsys/index.html">功能实验室</a></li>
-						<li><a href="${pageContext.request.contextPath}/xwhd/index.html">新闻动态</a></li>
-						<li><a href="${pageContext.request.contextPath}/fw/index.html">服务中心 </a></li>	
-						<li><a href="${pageContext.request.contextPath}/lxwm/index.html">联系我们</a></li>
+						<li><a href="/gnsys/index.html">功能实验室</a></li>
+						<li><a href="/xwhd/index.html">新闻动态</a></li>
+						<li><a href="/fw/index.html">服务中心 </a></li>	
+						<li><a href="/lxwm/index.html">联系我们</a></li>
 					</ul>
 				</div>
 
@@ -59,19 +59,19 @@
 			<div class="right toppic-progress">
 				<span><a href="javascript:history.back();" class="w-white">返回</a></span>
 				<i class=" am-icon-arrow-circle-right w-white"></i> <span><a
-					href="${pageContext.request.contextPath}/index.html" class="w-white">首页</a></span>
+					href="/index.html" class="w-white">首页</a></span>
 			</div>
 		</div>
 	</div>
 	<div class="mainCoat">
 		<div class="submenu">
 			<ul>
-				<li class="list-link"><a href="${pageContext.request.contextPath }/gyxs/company-inform.html">公司介绍</a></li>
-				<li class="list-link"><a href="${pageContext.request.contextPath }/gyxs/organize-inform.html">组织机构</a></li>
-				<li class="list-link"><a href="${pageContext.request.contextPath }/gyxs/team-inform.html">技术团队</a></li>
-				<li class="list-link"><a href="${pageContext.request.contextPath }/gyxs/ent-culture-inform.html">企业文化</a></li>
-				<li class="list-link"><a href="${pageContext.request.contextPath }/gyxs/honor-inform.html">资质荣誉</a></li>
-				<li class="list-link"><a href="${pageContext.request.contextPath }/gyxs/history-inform.html">历史沿革</a></li>
+				<li class="list-link"><a href="/gyxs/company-inform.html">公司介绍</a></li>
+				<li class="list-link"><a href="/gyxs/organize-inform.html">组织机构</a></li>
+				<li class="list-link"><a href="/gyxs/team-inform.html">技术团队</a></li>
+				<li class="list-link"><a href="/gyxs/ent-culture-inform.html">企业文化</a></li>
+				<li class="list-link"><a href="/gyxs/honor-inform.html">资质荣誉</a></li>
+				<li class="list-link"><a href="/gyxs/history-inform.html">历史沿革</a></li>
 			</ul>
 		</div>
 		<div class="mainbox">
@@ -92,9 +92,9 @@
 			<div class="down_le bord_ri">
 				<h4>联系我们</h4>
 				<p class="siz12 col_6" style="margin: 30px 0;">
-					<img src="${pageContext.request.contextPath }/res/img/tell.png"
+					<img src="/res/img/tell.png"
 						height="18" width="18">&nbsp;总公司市场部：0512-65982476 <br>
-					<img src="${pageContext.request.contextPath }/res/img/email.png"
+					<img src="/res/img/email.png"
 						height="18" width="18">&nbsp;邮箱地址：marketing@szxszk.com
 				</p>
 			</div>
@@ -113,7 +113,7 @@
 			</div>
 			<div class="bown_ri">
 				<a href="#"><img
-					src="${pageContext.request.contextPath}/res/img/weixin.jpg"></a>
+					src="/res/img/weixin.jpg"></a>
 			</div>
 			<div class="clear"></div>
 		</div>
@@ -126,13 +126,4 @@
 	</DIV>
 </body>
 </body>
-<!--[if lt IE 9]>
-<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
-<![endif]-->
-<script src="${pageContext.request.contextPath}/res/js/jquery.min.js"></script>
-<script src="${pageContext.request.contextPath}/res/js/amazeui.min.js"></script>
-<!--[if (gte IE 9)|!(IE)]><!-->
-
 </html>

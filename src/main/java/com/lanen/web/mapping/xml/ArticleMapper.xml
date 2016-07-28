@@ -23,10 +23,10 @@
 
 	<select id="getHotArticles" resultMap="articleMap">
 		select * from
-		weixin_hot_article where is_del!=1
+		portal_article where is_del!=1
 	</select>
 	<select id="queryById" resultMap="articleMap">
-		SELECT * FROM weixin_hot_article WHERE 1=1
+		SELECT * FROM portal_article WHERE 1=1
 		<!-- <if test="articleId != null">
 			AND id = #{articleId,jdbcType=INTEGER}
 		</if> -->
@@ -35,13 +35,18 @@
 	</select>
 	<select id="queryArticleTop5" resultMap="articleMap">
 		select * from
-		weixin_hot_article where is_del!=1
+		portal_article where is_del!=1
 		ORDER BY create_time desc LIMIT 0,5 
 	</select>
 	<select id="queryNewsByType" resultMap="articleMap">
 		select * from
-		weixin_hot_article where is_del!=1
+		portal_article where is_del!=1
 		and news_type=#{newsType}
 	</select>
-
+	<select id="queryByKeyWord"  parameterType="java.lang.String" resultMap="articleMap">
+		select * from portal_article
+		<if test="title!=null and title!=''">
+			where title like CONCAT('%',#{title},'%')
+		</if>
+	</select>
 </mapper>

@@ -32,14 +32,14 @@
 	
 	<select id="queryServiceItem" resultMap="serviceMap">
 		select * from
-		weixin_service_item where is_del!=1 and parent_id=0
+		portal_serviceitem where is_del!=1 and parent_id=0
 	</select>
 	<select id="queryServiceItemByParentId" resultMap="serviceMap">
 		select * from
-		weixin_service_item where is_del!=1 and parent_id=#{parentId}
+		portal_serviceitem where is_del!=1 and parent_id=#{parentId}
 	</select>
 	<select id="queryServiceCaseById" resultMap="serviceMap">
-		select sc.*, si.* from service_case sc, weixin_service_item si where sc.service_id  = si.id and si.id = #{serviceId}
+		select sc.*, si.* from portal_service_case sc, portal_serviceitem si where sc.service_id  = si.id and si.id = #{serviceId}
 	</select>
 	
 	<!-- <select id="queryCaseNameById" resultMap="java.lang.String">
@@ -47,6 +47,6 @@
 	</select> -->
 	
 	<select id="queryCaseNameById" resultMap="caseMap">
-		select * from portal_service_case where id=#{caseId}
+		select * from portal_case where id=#{caseId}
 	</select>
 </mapper>

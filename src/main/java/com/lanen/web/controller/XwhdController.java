@@ -2,6 +2,7 @@ package com.lanen.web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -30,7 +31,14 @@ public class XwhdController extends BaseController{
 		//TODO 每页12记录数
 		PageInfo<Article> article=newsService.queryByPage(currentPage, 12);
 				
-		return backView("news", article);
+		return backView("news", article,null);
+	}
+	@RequestMapping("/search/{keyWord}")
+	public ModelAndView search(Integer currentPage,@PathVariable String keyWord){
+		//TODO 每页12记录数
+		PageInfo<Article> article=newsService.queryNewsByKeyword(keyWord, currentPage, 12);
+		
+		return backView("news/news-inform-keyword", article,keyWord);
 	}
 	
 	/**
@@ -61,7 +69,7 @@ public class XwhdController extends BaseController{
 		
 		PageInfo<Article> article=newsService.queryNewsByPageForType(1,currentPage, null);
 		
-		return backView("news/news-gs-inform", article);
+		return backView("news/news-gs-inform", article,null);
 		
 	}
 	/**
@@ -74,7 +82,7 @@ public class XwhdController extends BaseController{
 	public ModelAndView xsNewsInfo(Integer currentPage){
 		PageInfo<Article> article=newsService.queryNewsByPageForType(2,currentPage, null);
 		
-		return backView("news/news-xs-inform", article);
+		return backView("news/news-xs-inform", article,null);
 	}
 	
 	/**

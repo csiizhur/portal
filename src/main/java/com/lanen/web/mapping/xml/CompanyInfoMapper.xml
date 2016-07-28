@@ -16,7 +16,7 @@
 
 	<select id="queryCompanyInfo" resultMap="CompanyInfoMap">
 		select * from
-		weixin_company where is_del!=1
+		portal_company where is_del!=1
 	</select>
 
 </mapper>

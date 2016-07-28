@@ -14,7 +14,7 @@
 
 	<select id="queryOrganize" resultMap="OrganizeMap">
 		select * from
-		portal_us_organize where is_del!=1
+		portal_organize where is_del!=1
 	</select>
 
 

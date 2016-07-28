@@ -16,11 +16,11 @@
 
 	<select id="queryEntCulture" resultMap="cultureMap">
 		select * from
-		portal_us_ent_culture where is_del!=1
+		portal_culture where is_del!=1
 	</select>
 	<select id="queryEntCultureById" resultMap="cultureMap">
 		select * from
-		portal_us_ent_culture where is_del!=1 and id=#{cultureId}
+		portal_culture where is_del!=1 and id=#{cultureId}
 	</select>
 	
 

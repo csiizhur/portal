@@ -13,15 +13,15 @@
 <meta name="renderer" content="webkit">
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-<link rel="alternate icon" href="${pageContext.request.contextPath}/res/img/xishanlogo.png">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/amazeui.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/style.css" />
+<link rel="alternate icon" href="/res/img/xishanlogo.png">
+<link rel="stylesheet" href="/res/css/amazeui.min.css" />
+<link rel="stylesheet" href="/res/css/style.css" />
 </head>
 <body class="commonbg_main">
 	<header class="am-topbar header">
 		<div class="am-container-1">
 			<div class="left hw-logo">
-				<img class=" logo" src="${pageContext.request.contextPath}/res/img/xishanlogo.png"></img>
+				<img class=" logo" src="/res/img/xishanlogo.png"></img>
 			</div>
 			<button
 				class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
@@ -36,12 +36,12 @@
 				<div class=" am-topbar-left am-form-inline am-topbar-right"
 					role="search">
 					<ul class="am-nav am-nav-pills am-topbar-nav hw-menu">
-						<li><a href="${pageContext.request.contextPath}/index.html">首页</a></li>
-						<li><a href="${pageContext.request.contextPath}/gyxs/index.html">关于我们</a></li>
-						<li  class="hw-menu-active"><a href="${pageContext.request.contextPath}/gnsys/index.html">功能实验室</a></li>
-						<li><a href="${pageContext.request.contextPath}/xwhd/index.html">新闻动态 </a></li>
-						<li><a href="${pageContext.request.contextPath}/fw/index.html">服务中心 </a></li>
-						<li><a href="${pageContext.request.contextPath}/lxwm/index.html">联系我们</a></li>
+						<li><a href="/index.html">首页</a></li>
+						<li><a href="/gyxs/index.html">关于我们</a></li>
+						<li  class="hw-menu-active"><a href="/gnsys/index.html">功能实验室</a></li>
+						<li><a href="/xwhd/index.html">新闻动态 </a></li>
+						<li><a href="/fw/index.html">服务中心 </a></li>
+						<li><a href="/lxwm/index.html">联系我们</a></li>
 					</ul>
 				</div>
 
@@ -51,7 +51,7 @@
 
 	<div class="prod_banner_wrapper">
 		<div
-			style="background-image: url(${pageContext.request.contextPath}/res/img/bgg.jpg); width: 100%; float: left; height: 139px;">
+			style="background-image: url(/res/img/bgg.jpg); width: 100%; float: left; height: 139px;">
 			<div class="prod_banner" style="font-size: 12px">
 
 				<p>首页>服务中心>${lab.laboratoryName }</p>
@@ -208,7 +208,7 @@
 			</div>
 			<div class="bown_ri">
 				<a href="#"><img
-					src="${pageContext.request.contextPath}/res/img/weixin.jpg"></a>
+					src="/res/img/weixin.jpg"></a>
 			</div>
 			<div class="clear"></div>
 		</div>
@@ -220,17 +220,7 @@
 		</div>
 	</DIV>
 </body>
-</body>
-<!--[if lt IE 9]>
-<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
-<![endif]-->
-
-<!--[if (gte IE 9)|!(IE)]><!-->
-<script src="${pageContext.request.contextPath}/res/js/jquery.min.js"></script>
-<!--<![endif]-->
-<script src="${pageContext.request.contextPath}/res/js/amazeui.min.js"></script>
+<script src="/res/js/jquery.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(
 			function() {

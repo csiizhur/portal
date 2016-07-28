@@ -19,7 +19,7 @@ import com.lanen.web.util.PageUtil;
 
 public class BaseController {
 
-	public ModelAndView backView(String view, PageInfo T) {
+	public ModelAndView backView(String view, PageInfo T,String keyWord) {
 		ModelAndView v = new ModelAndView(view);
 		Map<String,Object> map=new HashMap<String,Object>();
 		PageQueryUtil page=new PageQueryUtil();
@@ -41,6 +41,9 @@ public class BaseController {
 		map.put("currentPage", T.getPageNum());
 		v.addAllObjects(map);
 
+		if(keyWord!=null&&!("").equals(keyWord)){
+			v.addObject("keyWord", keyWord);
+		}
 		return v;
 	}
 	

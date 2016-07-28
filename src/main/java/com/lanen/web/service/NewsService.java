@@ -39,4 +39,6 @@ public interface NewsService {
 	 * @date 2016年7月7日 下午6:14:15
 	 */
 	PageInfo<Article> queryNewsByPageForType(int newsType,Integer pageNo,Integer pageSize);
+	
+	PageInfo<Article> queryNewsByKeyword(String keyWord,Integer pageNo,Integer pageSize);
 }

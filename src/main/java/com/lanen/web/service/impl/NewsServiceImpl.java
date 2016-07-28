@@ -52,6 +52,17 @@ public class NewsServiceImpl implements NewsService {
 	    //用PageInfo对结果进行包装
 	    PageInfo<Article> page = new PageInfo<Article>(list);
 	    return page;
+	}
+	@Override
+	public PageInfo<Article> queryNewsByKeyword(String keyWord, Integer pageNo,
+			Integer pageSize) {
+		 	pageNo = pageNo == null?1:pageNo;
+		    pageSize = pageSize == null?12:pageSize;
+		    PageHelper.startPage(pageNo, pageSize);
+		    List<Article> list = articleDao.queryByKeyWord(keyWord);
+		    //用PageInfo对结果进行包装
+		    PageInfo<Article> page = new PageInfo<Article>(list);
+		    return page;
 	} 
 	
 }
